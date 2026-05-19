@@ -1,0 +1,304 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TER | Compra Anticipada</title>
+
+  <!-- Hoja de estilos principal (CSS generado desde SCSS) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container navbar">
+
+      <div class="logo">TER</div>
+
+      <nav class="nav-links">
+        <a href="#">Inicio</a>
+        <a href="#">Destinos</a>
+        <a href="#">Promociones</a>
+        <a href="#">Ayuda</a>
+      </nav>
+
+      <button class="login-btn">
+        Iniciar sesión
+      </button>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Compra tus boletos en línea con TER
+        </h1>
+
+        <p>
+          Viaja de forma cómoda, rápida y segura.
+          Reserva tus viajes con compra anticipada desde cualquier lugar.
+        </p>
+
+      </div>
+
+      <!-- SEARCH CARD -->
+
+      <div class="search-card">
+
+        <h2>Encuentra tu próximo viaje</h2>
+
+        <div class="input-group">
+          <label>Origen</label>
+
+          <div class="input-wrapper">
+            <i class="bi bi-geo-alt"></i>
+            <input type="text" placeholder="Cuautla">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Destino</label>
+
+          <div class="input-wrapper">
+            <i class="bi bi-bus-front"></i>
+            <input type="text" placeholder="Ciudad de México">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Fecha</label>
+
+          <div class="input-wrapper">
+            <i class="bi bi-calendar-event"></i>
+            <input type="date">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Pasajeros</label>
+
+          <div class="input-wrapper">
+            <i class="bi bi-people"></i>
+
+            <select>
+              <option>1 Adulto</option>
+              <option>2 Adultos</option>
+              <option>3 Adultos</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="search-btn">
+          Buscar viaje
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DESTINATIONS -->
+
+  <section class="destinations">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Destinos populares</h2>
+        <p>Explora las rutas más populares de TER</p>
+      </div>
+
+      <div class="destination-grid">
+
+        <div class="destination-card">
+
+          <div class="destination-image">
+            <i class="bi bi-buildings"></i>
+          </div>
+
+          <div class="destination-content">
+            <h3>Cuautla → CDMX</h3>
+            <p>Viajes diarios con máxima comodidad.</p>
+            <span class="price">Desde $180</span>
+          </div>
+
+        </div>
+
+        <div class="destination-card">
+
+          <div class="destination-image">
+            <i class="bi bi-tree"></i>
+          </div>
+
+          <div class="destination-content">
+            <h3>Cuautla → Puebla</h3>
+            <p>Conecta con una de las ciudades más importantes.</p>
+            <span class="price">Desde $150</span>
+          </div>
+
+        </div>
+
+        <div class="destination-card">
+
+          <div class="destination-image">
+            <i class="bi bi-sun"></i>
+          </div>
+
+          <div class="destination-content">
+            <h3>Cuautla → Cuernavaca</h3>
+            <p>Viaja rápido y seguro con TER.</p>
+            <span class="price">Desde $120</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BENEFITS -->
+
+  <section class="benefits">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>¿Por qué viajar con TER?</h2>
+        <p>Una experiencia moderna y cómoda para todos tus viajes.</p>
+      </div>
+
+      <div class="benefits-grid">
+
+        <div class="benefit-card">
+          <i class="bi bi-ticket-perforated"></i>
+          <h3>Compra anticipada</h3>
+          <p>Reserva fácilmente tus viajes desde cualquier lugar.</p>
+        </div>
+
+        <div class="benefit-card">
+          <i class="bi bi-shield-check"></i>
+          <h3>Viajes seguros</h3>
+          <p>Protocolos y unidades modernas para mayor tranquilidad.</p>
+        </div>
+
+        <div class="benefit-card">
+          <i class="bi bi-wifi"></i>
+          <h3>Comodidad premium</h3>
+          <p>Asientos cómodos y servicios durante el viaje.</p>
+        </div>
+
+        <div class="benefit-card">
+          <i class="bi bi-phone"></i>
+          <h3>Todo desde tu celular</h3>
+          <p>Consulta horarios y boletos directamente desde la app.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TICKET -->
+
+  <section class="ticket-preview">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Tu boleto digital</h2>
+        <p>Accede rápidamente a tu viaje desde tu celular.</p>
+      </div>
+
+      <div class="ticket-card">
+
+        <div class="ticket-header">
+          <h2>TER</h2>
+          <p>Estrella Roja de Cuautla</p>
+        </div>
+
+        <div class="ticket-body">
+
+          <div class="ticket-row">
+            <span>Ruta</span>
+            <strong>Cuautla → CDMX</strong>
+          </div>
+
+          <div class="ticket-row">
+            <span>Fecha</span>
+            <strong>22 Marzo</strong>
+          </div>
+
+          <div class="ticket-row">
+            <span>Hora</span>
+            <strong>08:00 AM</strong>
+          </div>
+
+          <div class="ticket-row">
+            <span>Asiento</span>
+            <strong>12</strong>
+          </div>
+
+          <div class="qr"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div>
+        <h2>TER</h2>
+        <p>Compra anticipada de boletos</p>
+      </div>
+
+      <div class="footer-social">
+
+        <a href="#">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a href="#">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
+```
