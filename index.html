@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TER: Boletos de Autobús en Línea</title>
-  <!-- Hoja de estilos principal (CSS generado desde SCSS) -->
-  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="/assets/logo_ter.svg">
+  <title>TER: Boletos de Autobús en Línea</title>
 </head>
 
 <body>
@@ -53,14 +52,10 @@
       </div>
 
       <!-- SEARCH CARD -->
-
       <div class="search-card">
-
         <h2>Encuentra tu próximo viaje</h2>
-
         <div class="input-group">
           <label>Origen</label>
-
           <div class="input-wrapper">
             <i class="bi bi-geo-alt"></i>
             <input type="text" placeholder="Cuautla">
@@ -111,232 +106,107 @@
 
   <!-- DESTINATIONS -->
   <section class="destinations">
-
     <div class="container">
 
       <div class="section-title">
         <h2>Destinos populares</h2>
-        <p>Conoces nuestros destinos TER y elige tu lugar favorito.</p>
+        <p>Conoce nuestros destinos TER y elige tu lugar favorito.</p>
       </div>
 
-      <div class="destination-grid">
-        <div class="carousel-container">
+      <!-- DESKTOP COLLAGE -->
+      <div class="destinations-collage">
 
-  <!-- DESTINATIONS -->
-
-<section class="destinations">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2>Destinos populares</h2>
-
-      <p>
-        Conoce nuestros destinos TER y elige tu lugar favorito.
-      </p>
-
-    </div>
-
-    <!-- DESKTOP COLLAGE -->
-
-    <div class="destinations-collage">
-
-      <!-- CARD 1 -->
-
-      <div class="destination-item large">
-
-        <img src="assets/cuernavaca.jpg" alt="Cuernavaca">
-
-        <div class="destination-overlay">
-
-          <span class="destination-badge">
-            Cuernavaca
-          </span>
-
-          <h3></h3>
-
-          <p>
-            Vive la eterna primavera y disfruta cada viaje.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- CARD 2 -->
-
-      <div class="destination-item">
-
-        <img src="assets/puebla.jpg" alt="CDMX">
-
-        <div class="destination-overlay">
-
-          <span class="destination-badge">
-            EXPERIENCIA TER
-          </span>
-
-          <h3>Ciudad de México</h3>
-
-          <p>
-            Arquitectura, cultura y gastronomía.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- CARD 3 -->
-
-      <div class="destination-item">
-
-        <img src="assets/puebla.jpeg" alt="Puebla">
-
-        <div class="destination-overlay">
-
-          <span class="destination-badge">
-            VIAJE PREMIUM
-          </span>
-
-          <h3>Puebla</h3>
-
-          <p>
-            Conecta con la capital cómodamente.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- CARD 4 -->
-
-      <div class="destination-item wide">
-
-        <img src="assets/taxco.jpg" alt="Iguala">
-
-        <div class="destination-overlay">
-
-          <span class="destination-badge">
-            ESCAPADA TER
-          </span>
-
-          <h3>Iguala</h3>
-
-          <p>
-            Descubre la ciudad de plata y sus calles coloniales.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- MOBILE CAROUSEL -->
-
-    <div class="mobile-carousel">
-
-      <div class="mobile-track">
-
-        <!-- SLIDE 1 -->
-
-        <div class="mobile-card">
-
+        <!-- CARD 1-->
+        <div class="destination-item wide">
           <img src="assets/cuernavaca.jpg" alt="Cuernavaca">
-
-          <div class="mobile-overlay">
-
-            <h3>Cuautla → Cuernavaca</h3>
-
-            <p>
-              Vive la eterna primavera.
-            </p>
-
+          <div class="destination-overlay">
+            <span class="destination-pill">Cuernavaca</span>
+            <p>Disfruta la ciudad de la eterna primavera, donde el sol abraza y la historia inspira.</p>
           </div>
+        </div> 
 
-        </div>
-
-        <!-- SLIDE 2 -->
-
-        <div class="mobile-card">
-
-          <img src="assets/puebla.jpg" alt="Puebla">
-
-          <div class="mobile-overlay">
-
-            <h3>Cuautla → Puebla</h3>
-
-            <p>
-              Cultura y gastronomía.
-            </p>
-
-          </div>
-
-        </div>
-
-        <!-- SLIDE 3 -->
-
-        <div class="mobile-card">
-
+        <!-- CARD 2-->
+        <div class="destination-item">
           <img src="assets/cdmx.jpg" alt="CDMX">
-
-          <div class="mobile-overlay">
-
-            <h3>Cuautla → CDMX</h3>
-
-            <p>
-              Viaja cómodo a la capital.
-            </p>
-
+          <div class="destination-overlay">
+            <span class="destination-pill">Ciudad de México</span>
+            <p>La metropolí que nunca duerme, un epicentro de historia y vangiardia.</p>
           </div>
-
         </div>
 
-        <!-- SLIDE 4 -->
-
-        <div class="mobile-card">
-
-          <img src="assets/taxco.jpg" alt="Taxco">
-
-          <div class="mobile-overlay">
-
-            <h3>Cuautla → Taxco</h3>
-
-            <p>
-              Descubre la ciudad de plata.
-            </p>
-
+        <!-- CARD 3-->
+        <div class="destination-item">
+          <img src="assets/puebla.jpg" alt="Puebla">
+          <div class="destination-overlay">
+            <span class="destination-pill">Puebla</span>
+            <p>Conecta con la capital cómodamente.</p>
           </div>
-
         </div>
 
+        <!-- CARD 4-->
+        <div class="destination-item large">
+          <img src="assets/iguala.jpg" alt="Iguala">
+          <div class="destination-overlay">
+            <span class="destination-pill">Iguala</span>
+            <p>Cuna de la independencia, un símbolo de historia y unión.</p>
+          </div>
+        </div>
+         
       </div>
 
-    </div>
+      <!-- MOBILE CAROUSEL -->
+      <div class="mobile-carousel">
+        <div class="mobile-track">
 
-  </div>
+          <!-- SLIDE 1 -->
+          <div class="mobile-card">
+            <img src="assets/cuernavaca.jpg" alt="Cuernavaca">
+            <div class="mobile-overlay">
+              <h3>Cuernavaca</h3>
+              <p>Disfruta la ciudad de la eterna primaver, donde el sol abraza y la historia inspira.</p>
+            </div>
+          </div>
 
-</section>
+          <!-- SLIDE 2 -->
+          <div class="mobile-card">
+            <img src="assets/puebla.jpg" alt="Puebla">
+            <div class="mobile-overlay">
+              <h3>Cuautla → Puebla</h3>
+              <p>Cultura y gastronomía.</p>
+            </div>
+          </div>
 
+          <!-- SLIDE 3 -->
+          <div class="mobile-card">
+            <img src="assets/cdmx.jpg" alt="CDMX">
+            <div class="mobile-overlay">
+              <h3>Cuautla → CDMX</h3>
+              <p>Viaja cómodo a la capital.</p>
+            </div>
+          </div>
+
+          <!-- SLIDE 4 -->
+          <div class="mobile-card">
+            <img src="assets/iguala.jpg" alt="Iguala">
+            <div class="mobile-overlay">
+              <h3>Cuautla → Taxco</h3>
+              <p>Descubre la ciudad de plata.</p>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
-
   </section>
 
   <!-- BENEFITS -->
-
   <section class="benefits">
-
     <div class="container">
-
       <div class="section-title">
         <h2>¿Por qué viajar con TER?</h2>
         <p>Una experiencia moderna y cómoda para todos tus viajes.</p>
       </div>
 
       <div class="benefits-grid">
-
         <div class="benefit-card">
           <i class="bi bi-ticket-perforated"></i>
           <h3>Compra anticipada</h3>
@@ -360,92 +230,64 @@
           <h3>Todo desde tu celular</h3>
           <p>Consulta horarios y boletos directamente desde la app.</p>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <!-- TICKET -->
-
   <section class="ticket-preview">
-
     <div class="container">
-
       <div class="section-title">
         <h2>Tu boleto digital</h2>
         <p>Accede rápidamente a tu viaje desde tu celular.</p>
       </div>
-
       <div class="ticket-card">
-
         <div class="ticket-header">
           <h2>TER</h2>
           <p>Estrella Roja de Cuautla</p>
         </div>
-
         <div class="ticket-body">
-
           <div class="ticket-row">
             <span>Ruta</span>
             <strong>Cuautla → CDMX</strong>
           </div>
-
           <div class="ticket-row">
             <span>Fecha</span>
             <strong>22 Marzo</strong>
           </div>
-
           <div class="ticket-row">
             <span>Hora</span>
             <strong>08:00 AM</strong>
           </div>
-
           <div class="ticket-row">
             <span>Asiento</span>
             <strong>12</strong>
           </div>
-
           <div class="qr"></div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <!-- FOOTER -->
-
   <footer>
-
     <div class="container footer-content">
-
       <div>
         <h2>TER</h2>
         <p>Compra anticipada de boletos</p>
       </div>
-
       <div class="footer-social">
-
         <a href="#">
           <i class="bi bi-facebook"></i>
         </a>
-
         <a href="#">
           <i class="bi bi-instagram"></i>
         </a>
-
         <a href="#">
           <i class="bi bi-twitter-x"></i>
         </a>
-
       </div>
-
     </div>
-
   </footer>
 
 </body>
