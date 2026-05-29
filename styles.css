@@ -337,14 +337,19 @@
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
-  padding:2.5rem;
-  padding-bottom:2.5rem;
+  padding-top: 2rem;
+  padding-right:2rem;
+  padding-bottom:2rem;
+  padding-left: 0;
 }
 
 .destination-overlay p{
-  color:rgba(255,255,255,0.85);
+  color:rgba(255,255,255,0.95);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  font-weight: 500;
   line-height:1.6;
   max-width:320px;
+  margin-left: 0.5rem;
 }
 
 .destination-pill{
@@ -352,19 +357,18 @@
   align-items: center;
   width: fit-content;
   min-width: 220px;
-  padding:16px 28px;
-  border-radius:0 50px 50px 0;
+  padding:10px 24px 10px 42px;
+  border-radius: 50px;
   background:rgba(198,40,40,0.35);
   backdrop-filter: blur(2px);
-  -webkit-backdrop-filter:
-  blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   color:white;
-  font-size:1.35rem;
+  font-size: 1rem;
   font-weight:700;
-  letter-spacing:0.5px;
-  margin-bottom:1rem;
+  margin-left: -2rem;
+  margin-bottom:.75rem;
 }
 
 /* COLLAGE SIZES */
