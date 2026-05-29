@@ -23,18 +23,28 @@
         <span class="logo-text">ESTRELLA ROJA DE CUAUTLA</span>
       </div>
 
-      <nav class="nav-links">
-        <a href="#">Home</a>
-        <a href="#destinations" onclick="seleccionar(this)">Destinos populares</a>
-        <a href="#">Promociones</a>
-        <a href="#">Contacto</a>
-      </nav>
+      
 
       <button class="login-btn">
         Iniciar sesión
       </button>
+
+      <button class="hamburger-btn">
+        <i class="bi bi-list"></i>
+      </button>
     </div>
   </header>
+
+<div class="menu-overlay"></div>
+<div class="mobile-menu">
+  <button class="close-menu">
+    <i class="bi bi-x-lg"></i>
+  </button>
+  <a href="#">Inicio</a>
+  <a href="#destinations">Destinos</a>
+  <a href="#">Promociones</a>
+  <a href="#">Contacto</a>
+</div>
 
   <!-- HERO -->
   <section class="hero">
@@ -139,7 +149,7 @@
           <img src="assets/cdmx.jpg" alt="CDMX">
           <div class="destination-overlay">
             <span class="destination-pill">Ciudad de México</span>
-            <p>La metropolí que nunca duerme, un epicentro de historia y vangiardia.</p>
+            <p>La metropolí que nunca duerme, un epicentro de historia y vanguardia.</p>
           </div>
         </div>
 
@@ -199,7 +209,7 @@
             <img src="assets/cdmx.jpg" alt="CDMX">
             <div class="mobile-overlay">
               <span class="destination-pill">Ciudad de México</span>
-              <p>La metropolí que nunca duerme, un epicentro de historia y vangiardia.</p>
+              <p>La metropolí que nunca duerme, un epicentro de historia y vanguardia.</p>
             </div>
           </div>
 
@@ -217,7 +227,7 @@
             <img src="assets/iguala.jpg" alt="Iguala">
             <div class="mobile-overlay">
               <span class="destination-pill">Iguala</span>
-              <p>una de la independencia, un símbolo de historia y unión.</p>
+              <p>Cuna de la independencia, un símbolo de historia y unión.</p>
             </div>
           </div>
 
@@ -336,6 +346,7 @@
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
 ```
