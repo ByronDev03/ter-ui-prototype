@@ -383,19 +383,16 @@
 }
 
 /* MOBILE CAROUSEL */
-
 .mobile-carousel{
   display:none;
 }
 
 .mobile-track{
   display:flex;
-  gap:1.2rem;
-
+  gap:1rem;
   overflow-x:auto;
-
   scroll-snap-type:x mandatory;
-
+  padding: 0 1rem;
   scrollbar-width:none;
 }
 
@@ -406,17 +403,11 @@
 .mobile-card{
   min-width:280px;
   height:480px;
-
   border-radius:28px;
-
   overflow:hidden;
-
   position:relative;
-
   flex-shrink:0;
-
   scroll-snap-align:center;
-
   box-shadow:
   0 20px 40px rgba(0,0,0,0.12);
 }
@@ -430,13 +421,12 @@
 .mobile-overlay{
   position:absolute;
   inset:0;
-
   background:
   linear-gradient(
   to top,
-  rgba(0,0,0,0.85),
-  rgba(0,0,0,0.2),
-  rgba(0,0,0,0.1)
+  rgba(0,0,0,0.75),
+  rgba(0,0,0,0.15),
+  transparent
   );
 
   display:flex;
@@ -456,6 +446,24 @@
 .mobile-overlay p{
   color:rgba(255,255,255,0.85);
   line-height:1.6;
+}
+
+.carousel-dots{
+  display:flex;
+  justify-content:center;
+  gap:.5rem;
+  margin-top:1.5rem;
+}
+
+.carousel-dots span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#d0d0d0;
+}
+
+.carousel-dots span.active{
+  background:#C62828;
 }
 
 /* RESPONSIVE */
