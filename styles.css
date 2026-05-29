@@ -433,9 +433,15 @@
   flex-direction:column;
   justify-content:flex-end;
 
-  padding:2rem;
-
+  padding-top:2rem;
+  padding-right:2rem;
+  padding-bottom:2rem;
+  padding-left:0;
   color:white;
+}
+
+.mobile-overlay .destination-pill{
+  margin-left:-2rem;
 }
 
 .mobile-overlay h3{
@@ -446,6 +452,7 @@
 .mobile-overlay p{
   color:rgba(255,255,255,0.85);
   line-height:1.6;
+  margin-left: 0.5rem;
 }
 
 .carousel-dots{
