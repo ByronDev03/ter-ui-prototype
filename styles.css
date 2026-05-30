@@ -107,19 +107,20 @@
       box-shadow:0 10px 20px rgba(76,175,80,0.3);
     }
 
-    .hamburger-btn{
+.hamburger-btn{
   display:none;
   background:none;
   border:none;
-  color:white;
-  font-size:1.8rem;
+  color:#C62828;
+  font-size:2rem;
   cursor:pointer;
 }
 
 .mobile-menu{
   position:fixed;
   top:0;
-  left:0;
+  right:auto;
+  left: 0;
 
   width:280px;
   height:100vh;
