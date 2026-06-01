@@ -50,6 +50,14 @@ body{
     line-height:1.6;
 }
 
+.destination-info p{
+    font-size:1.15rem;
+    line-height: 1.5;
+    color: #444;
+    max-width: 1000px;
+    text-align: justify;
+}
+
 .destination-info,
 .places,
 .cta{
@@ -58,9 +66,36 @@ body{
     padding:5rem 2rem;
 }
 
-.destination-info h2,
+.destination-info{
+    background:white;
+    border-radius:24px;
+    padding:3rem;
+    margin-top:4rem;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.destination-info h2{
+    color:#C62828;
+    font-size: 2.5rem;
+    margin-bottom:1.5rem;
+    position: relative;
+}
+
+.destination-info h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #C62828;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
 .places h2{
-    margin-bottom:1rem;
+    color:#C62828;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .places-grid{
@@ -74,6 +109,13 @@ body{
     background:white;
     border-radius:20px;
     overflow:hidden;
+    transition:.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 08);
+}
+
+.place-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
 .place-card img{
@@ -95,14 +137,29 @@ body{
     text-align:center;
 }
 
+.cta h2{
+    font-size:2.5rem;
+    margin-bottom:1rem;
+}
+
+.cta p{
+    color:#666;
+    font-size:1.1rem;
+    margin-bottom:2rem;
+}
+
 .btn-buy{
     display:inline-block;
-    margin-top:1rem;
-    padding:1rem 2rem;
-
+    padding:1rem 2.5rem;
     background:#C62828;
     color:white;
     text-decoration:none;
-
     border-radius:12px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.btn-buy:hover{
+    background:#a91f1f;
+    transform:translateY(-2px);
 }
