@@ -24,13 +24,10 @@ body{
 .hero-overlay{
     position:absolute;
     inset:0;
-
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
-
     padding:3rem;
-
     background:linear-gradient(
         to top,
         rgba(0,0,0,.8),
@@ -109,13 +106,26 @@ body{
     background:white;
     border-radius:20px;
     overflow:hidden;
-    transition:.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 08);
+    transition:.3s ease;  
 }
 
 .place-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-12px);
     box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.place-card article{
+    background-color: #fff;
+    height: 0;
+    overflow:hidden;
+    transition: height 0.5s;
+    interpolate-size: allow-keywords;
+    padding: 0 10px;
+}
+
+.place-card:hover article{
+    height: auto;
 }
 
 .place-card img{
@@ -124,13 +134,19 @@ body{
     object-fit:cover;
 }
 
-.place-card h3{
-    padding:1rem 1rem .5rem;
+.place-card-content{
+    padding:1.25rem;
 }
 
-.place-card p{
-    padding:0 1rem 1rem;
-    text-align: justify;
+.place-card-content h3{
+    margin-bottom:.75rem;
+    color: #C62828;
+}
+
+.place-card-content p{
+    color:#555;
+    line-height:1.6;
+    text-align:justify;
 }
 
 .gastronomy{
@@ -170,8 +186,21 @@ body{
 }
 
 .food-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-12px);
     box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.food-card article{
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+    interpolate-size: allow-keywords;
+    padding: 0 10px;
+}
+
+.food-card:hover article{
+    height: auto;
 }
 
 .food-card img{
@@ -186,7 +215,7 @@ body{
 
 .food-card-content h3{
     margin-bottom:.75rem;
-    color:#222;
+    color: #C62828;
 }
 
 .food-card-content p{
@@ -227,7 +256,7 @@ body{
 }
 
 .footer{
-    background:#C62828;;
+    background:#C62828;
     color:white;
     margin-top:6rem;
 }
