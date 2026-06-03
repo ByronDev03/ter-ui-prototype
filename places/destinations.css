@@ -117,12 +117,10 @@ body{
 }
 
 .place-card article{
-    background-color: #fff;
     height: 0;
     overflow:hidden;
-    transition: height 0.5s;
+    transition: height .5s;
     interpolate-size: allow-keywords;    
-    padding: 0 10px;
 }
 
 .place-card:hover article{
@@ -140,13 +138,12 @@ body{
 }
 
 .place-card-content h3{
-    margin-bottom:.75rem;
+    margin-bottom: .75rem;
     color: #C62828;
-    font-size: 1.4rem;
 }
 
-.place-card-content p{
-    color:#555;
+.place-card-content article p{
+    color:#222;
     line-height:1.6;
     text-align:justify;
 }
@@ -194,12 +191,10 @@ body{
 }
 
 .food-card article{
-    background-color: #fff;
     height: 0;
     overflow: hidden;
-    transition: height 0.5s;
+    transition: height .5s;
     interpolate-size: allow-keywords;
-    padding: 0 10px;
 }
 
 .food-card:hover article{
@@ -221,8 +216,8 @@ body{
     color: #C62828;
 }
 
-.food-card-content p{
-    color:#555;
+.food-card-content article p{
+    color:#222;
     line-height:1.6;
     text-align:justify;
 }
