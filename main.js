@@ -41,3 +41,33 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+  const button = item.querySelector('.faq-question');
+  const icon = button.querySelector('i');
+
+  button.addEventListener('click', () => {
+
+    faqItems.forEach(faq => {
+
+      if(faq !== item){
+        faq.classList.remove('active');
+
+        faq.querySelector('i')
+          .className = 'bi bi-plus-lg';
+      }
+
+    });
+
+    item.classList.toggle('active');
+
+    icon.className = item.classList.contains('active')
+      ? 'bi bi-dash-lg'
+      : 'bi bi-plus-lg';
+
+  });
+
+});
