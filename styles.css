@@ -714,58 +714,58 @@
 }
 
 .footer-grid{
-    display:grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1.2fr;
-    gap:3rem;
-    padding:4rem 0;
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1.2fr;
+  gap:3rem;
+  padding:4rem 0;
 }
 
 .footer-main{
-    display:flex;
-    flex-direction:column;
-    gap:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
 }
 
 .footer-section{
-    display:flex;
-    flex-direction:column;
-    gap:.75rem;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
 }
 
 .footer-brand img{
-    width: 140px;
-    margin-bottom:0;
-    margin-left: 1.5rem;
+  width: 140px;
+  margin-bottom:0;
+  margin-left: 1.5rem;
 }
 
 .footer-brand-text{
-    display:block;
-    margin-top: -4px;
-    margin-bottom:1.25rem;
-    font-size:.85rem;
-    font-weight:700;
-    letter-spacing:2px;
-    color:#222;
-    margin-left: 1.5rem;
+  display:block;
+  margin-top: -4px;
+  margin-bottom:1.25rem;
+  font-size:.85rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#222;
+  margin-left: 1.5rem;
 }
 
 .footer-brand p{
-    color:#666;
-    line-height:1.7;
+  color:#666;
+  line-height:1.7;
 }
 
 .footer h4{
-    color:#D62828;
-    margin-bottom:1rem;
-    font-size:1.1rem;
+  color:#D62828;
+  margin-bottom:1rem;
+  font-size:1.1rem;
 }
 
 .footer a{
-    display:block;
-    text-decoration:none;
-    color:#555;
-    margin-bottom:.75rem;
-    transition:.3s;
+  display:block;
+  text-decoration:none;
+  color:#555;
+  margin-bottom:.75rem;
+  transition:.3s;
 }
 
 .footer a:hover{
@@ -790,9 +790,9 @@
 }
 
 .footer-social{
-    display:flex;
-    gap:1rem;
-    margin-top:1rem;
+  display:flex;
+  gap:1rem;
+  margin-top:1rem;
 }
 
 .footer-social a{
@@ -806,20 +806,19 @@
       color .3s ease,
       transform .3s ease,
       opacity .3s ease;
-    
 }
 
 .footer-social a:hover{
-    opacity: 1;
-    color: #D62828;
-    transform:translateY(-6px) scale(1.12);
+  opacity: 1;
+  color: #D62828;
+  transform:translateY(-6px) scale(1.12);
 }
 
 .footer-bottom{
-    border-top:1px solid #e5e7eb;
-    text-align:center;
-    padding:1.5rem;
-    color:#777;
+  border-top:1px solid #e5e7eb;
+  text-align:center;
+  padding:1.5rem;
+  color:#777;
 }
 
     /* RESPONSIVE */
@@ -838,7 +837,6 @@
       .footer-grid{
         grid-template-columns: repeat(2,1fr);
       }
-
     }
 
     @media(max-width:768px){
