@@ -42,6 +42,9 @@ window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
 
+
+
+
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
@@ -67,6 +70,25 @@ faqItems.forEach(item => {
     icon.className = item.classList.contains('active')
       ? 'bi bi-dash-lg'
       : 'bi bi-plus-lg';
+
+  });
+
+});
+
+
+
+
+const footerAccordions =
+document.querySelectorAll(".footer-accordion");
+
+footerAccordions.forEach(item => {
+
+  const button =
+  item.querySelector(".footer-toggle");
+
+  button.addEventListener("click", () => {
+
+    item.classList.toggle("active");
 
   });
 
