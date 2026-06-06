@@ -112,18 +112,22 @@ body{
 }
 
 .place-card:hover{
-    transform:translateY(-12px);
+    transform:translateY(-6px);
     box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
 .place-card article{
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height .4s ease;   
+    transition: 
+        max-height .55s ease-in-out,
+        opacity .35s ease;  
 }
 
 .place-card.active article{
     max-height: 500px;
+    opacity: 1;
 }
 
 .place-card img{
@@ -185,18 +189,22 @@ body{
 }
 
 .food-card:hover{
-    transform:translateY(-12px);
+    transform:translateY(-6px);
     box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
 .food-card article{
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height .4s ease;
+    transition: 
+        max-height .55s ease-in-out,
+        opacity .35s ease;
 }
 
 .food-card.active article{
     max-height: 500px;
+    opacity: 1;
 }
 
 .food-card img{
@@ -370,6 +378,7 @@ body{
     .place-card:hover article,
     .food-card:hover article{
         max-height: 500px;
+        opacity:1;
     }
 
 }
