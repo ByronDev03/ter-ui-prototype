@@ -120,7 +120,7 @@ body{
     height: 0;
     overflow:hidden;
     transition: height .5s;
-    interpolate-size: allow-keywords;    
+    /*interpolate-size: allow-keywords;*/    
 }
 
 .place-card:hover article{
@@ -198,15 +198,15 @@ body{
     height: 0;
     overflow: hidden;
     transition: height .5s;
-    interpolate-size: allow-keywords;
+    /*interpolate-size: allow-keywords;*/
 }
 
 .food-card:hover article{
-    height: auto;
+    height: 200px;
 }
 
 .food-card.active article{
-    height: auto;
+    height: 200px;
 }
 
 .food-card img{
