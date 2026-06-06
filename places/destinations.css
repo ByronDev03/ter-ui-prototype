@@ -127,7 +127,7 @@ body{
     height: auto;
 }
 
-.place-card:active article{
+.place-card.active article{
     height: auto;
 }
 
@@ -205,7 +205,7 @@ body{
     height: auto;
 }
 
-.food-card:active article{
+.food-card.active article{
     height: auto;
 }
 
