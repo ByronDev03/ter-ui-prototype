@@ -892,6 +892,7 @@ header{
   .footer-toggle i{
     transition:.3s;
     display: block;
+    font-size: 1.4rem;
   }
 
   .footer-content{
