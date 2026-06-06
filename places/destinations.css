@@ -235,6 +235,7 @@ body{
     color:#666;
     font-size:1.1rem;
     margin-bottom:2rem;
+    line-height:1.8;
 }
 
 .btn-buy{
@@ -365,4 +366,155 @@ body{
   text-align:center;
   padding:1.5rem;
   color:#777;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+    .hero{
+        height: 55vh;
+    }
+
+    .hero-overlay{
+        padding: 1.5rem;
+    }
+
+    .hero-overlay h1{
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .hero-overlay p{
+        font-size: 1rem;
+        margin-top: .75rem;
+    }
+
+    .destination-info,
+    .places,
+    .gastronomy,
+    .cta{
+        padding: 3rem 1rem;
+    }
+
+    .destination-info{
+        margin-top: 2rem;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .destination-info h2,
+    .places h2,
+    .gastronomy h2,
+    .cta h2{
+        font-size: 2rem;
+    }
+
+    .destination-info p,
+    .gastronomy-description,
+    .cta p{
+        font-size: 1rem;
+    }
+
+    .cta p{
+        font-size: 1rem;
+    }
+
+    .places-grid,
+    .gastronomy-grid{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .place-card img{
+        height: 220px;
+    }
+
+    .food-card img{
+        height: 200px;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .footer-brand{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .footer-brand img,
+    .footer-brand-text{
+        margin-left:0;
+    }
+
+    .footer-social{
+        justify-content:center;
+    }
+
+    .footer-contact{
+        justify-content:center;
+    }
+
+    .footer-accordion{
+        padding:0;
+    }
+
+    .footer-toggle{
+        width:100%;
+        background:none;
+        border:none;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:1.15rem;
+        font-weight:700;
+        color:#D62828;
+        padding:.75rem 1.5rem;
+        cursor:pointer;
+    }
+
+    .footer-toggle i{
+        font-size:1.6rem;
+        transition:.3s;
+    }
+
+    .footer-content{
+        max-height:0;
+        overflow:hidden;
+        display:flex;
+        flex-direction:column;
+        gap:.75rem;
+        transition:max-height .35s ease;
+        padding:0 1.5rem;
+    }
+
+    .footer-accordion.active .footer-content{
+        max-height:200px;
+    }
+
+    .footer-accordion.active .footer-toggle i{
+        transform:rotate(180deg);
+    }
+}
+
+@media (max-width: 480px){
+
+    .hero-overlay h1{
+        font-size: 2.6rem;
+    }
+
+    .hero-overlay p{
+        font-size: .95rem;
+        line-height: 1.6;
+    }
+
+    .destination-info h2,
+    .places h2,
+    .gastronomy h2,
+    .cta h2{
+        font-size: 1.8rem;
+    }
 }
