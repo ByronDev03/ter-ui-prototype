@@ -127,6 +127,10 @@ body{
     height: auto;
 }
 
+.place-card:active article{
+    height: auto;
+}
+
 .place-card img{
     width:100%;
     height:250px;
@@ -198,6 +202,10 @@ body{
 }
 
 .food-card:hover article{
+    height: auto;
+}
+
+.food-card:active article{
     height: auto;
 }
 
@@ -426,6 +434,17 @@ body{
 
     .place-card img{
         height: 220px;
+    }
+
+    .place-card:hover,
+    .food-card:hover{
+        transform:none;
+        box-shadow:0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .place-card:hover article,
+    .food-card:hover article{
+        height:0;
     }
 
     .food-card img{
