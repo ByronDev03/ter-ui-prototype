@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viaja a Cuautla, Mor. en Autóbus | TER</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/places/destinations.css">
 </head>
 <body>
@@ -31,41 +32,65 @@
     <section class="places">
         <h2>Lugares imperdibles</h2>
         <div class="places-grid">
-            <article class="place-card">
-                <img src="/assets/" alt="">
-                <h3>Ex Convento de Santo Domingo</h3>
-                <p>Uno de los sitios históricos más importantes de la ciudad.</p>
-            </article>
+            <div class="place-card">
+                <img src="/assets/.avif" alt="lugar 1">
+                <div class="place-card-content">
+                    <h3>Lugar 1</h3>
+                    <article>
+                        <p>.</p>
+                    </article>
+                </div>
+            </div>
 
-            <article class="place-card">
-                <img src="/assets/" alt="">
-                <h3>Tren Escénico</h3>
-                <p>Una experiencia turística ideal para conocer Cuautla.</p>
-            </article>
+            <div class="place-card">
+                <img src="/assets/.avif" alt="lugar 2">
+                <div class="place-card-content">
+                    <h3>Lugar 2</h3>
+                    <article>
+                        <p>.</p>
+                    </article>
+                </div>
+            </div>
 
-            <article class="place-card">
-                <img src="/assets/" alt="">
-                <h3>Balnearios</h3>
-                <p>Perfectos para disfrutar del clima cálido de Morelos.</p>
-            </article>
+            <div class="place-card">
+                <img src="/assets/.avif" alt="lugar 3">
+                <div class="place-card-content">
+                    <h3>Lugar 3</h3>
+                    <article>
+                        <p>.</p>
+                    </article>
+                </div>
+            </div>
 
-            <article class="place-card">
-                <img src="/assets/" alt="">
-                <h3></h3>
-                <p>.</p>
-            </article>
+            <div class="place-card">
+                <img src="/assets/.avif" alt="lugar 4">
+                <div class="place-card-content">
+                    <h3>Lugar 4</h3>
+                    <article>
+                        <p>.</p>
+                    </article>
+                </div>
+            </div>
 
-            <article class="place-card">
-                <img src="/assets/" alt="">
-                <h3></h3>
-                <p>.</p>
-            </article>
+            <div class="place-card">
+                <img src="/assets/.avif" alt="lugar 5">
+                <div class="place-card-content">
+                    <h3>Lugar 5</h3>
+                    <article>
+                        <p>.</p>
+                    </article>
+                </div>
+            </div>
 
-            <article class="place-card">
-                <img src="/assets/" alt="">
-                <h3></h3>
-                <p>.</p>
-            </article>
+            <div class="place-card">
+                <img src="/assets/.avif" alt="lugar 6">
+                <div class="place-card-content">
+                    <h3>Lugar 6</h3>
+                    <article>
+                        <p>.</p>
+                    </article>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -84,7 +109,9 @@
                     <img src="/assets/tacos-acorazados.avif" alt="Tacos Acorazados">
                     <div class="food-card-content">
                         <h3>Tacos Acorazados</h3>
-                        <p>.</p>
+                        <article>
+                            <p>.</p>
+                        </article>
                     </div>
                 </div>
 
@@ -92,7 +119,9 @@
                     <img src="/assets/cecina.avif" alt="Cecina">
                     <div class="food-card-content">
                         <h3>Cecina</h3>
-                        <p>.</p>
+                        <article>
+                            <p>.</p>
+                        </article>
                     </div>
                 </div>
 
@@ -100,15 +129,19 @@
                     <img src="/assets/tepache.avif" alt="Tepache">
                     <div class="food-card-content">
                         <h3>Tepache</h3>
-                        <p>.</p>
+                        <article>
+                            <p>.</p>
+                        </article>
                     </div>
                 </div>
 
                 <div class="food-card">
-                    <img src="assets/torta.jpg" alt="Tortas">
+                    <img src="assets/.avif" alt="comida 4">
                     <div class="food-card-content">
-                        <h3></h3>
-                        <p>.</p>
+                        <h3>comida 4</h3>
+                        <article>
+                            <p>.</p>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -132,31 +165,51 @@
             </div>
 
             <!-- Empresa -->
-            <div>
-                <h4>SOBRE LA EMPRESA</h4>
-                <a href="#">Acerca de nosotros</a>
-                <a href="#">Bolsa de trabajo</a>
+            <div class="footer-accordion">
+                <button class="footer-toggle">
+                    SOBRE LA EMPRESA
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="footer-content">
+                    <a href="#">Acerca de nosotros</a>
+                    <a href="#">Bolsa de trabajo</a>
+                </div>
             </div>
 
             <!-- Servicios -->
-            <div>
-                <h4>SERVICIOS</h4>
-                <a href="#">Imprime tu boleto</a>
+             <div class="footer-accordion">
+                <button class="footer-toggle">
+                    SERVICIOS
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="footer-content">
+                    <a href="#">Imprime tu boleto</a>
+                </div>
             </div>
 
             <!-- Legales --> 
-            <div>
-                <h4>LEGALES</h4>
-                <a href="#">Aviso de privacidad</a>
-                <a href="#">Términos y condiciones</a>
-                <a href="#">Política de compra</a>
+            <div class="footer-accordion">
+                <button class="footer-toggle">
+                    LEGALES
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="footer-content">
+                    <a href="#">Aviso de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Política de compra</a>
+                </div>
             </div>
 
             <!-- Ayuda -->
-            <div>
-                <h4>AYUDA</h4>
-                <a href="#faq">Preguntas frecuentes</a>
-                <a href="#">Cuentanos tu experiencia</a>
+            <div class="footer-accordion">
+                <button class="footer-toggle">
+                    AYUDA
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="footer-content">
+                    <a href="#faq">Preguntas frecuentes</a>
+                    <a href="#">Cuentanos tu experiencia</a>
+                </div>
             </div>
 
             <!-- Contacto -->
@@ -183,5 +236,8 @@
             <p>© 2026 TER - Estrella Roja de Cuautla. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="/places/destinations.js"></script>
+    <script src="/places/card-accordion.js"></script>
 </body>
 </html>

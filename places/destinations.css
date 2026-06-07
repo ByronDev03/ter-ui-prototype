@@ -120,14 +120,11 @@ body{
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: 
-        max-height .55s ease-in-out,
-        opacity .35s ease;  
+    transition: max-height .4s ease;
 }
 
 .place-card.active article{
     max-height: 500px;
-    opacity: 1;
 }
 
 .place-card img{
@@ -197,14 +194,11 @@ body{
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: 
-        max-height .55s ease-in-out,
-        opacity .35s ease;
+    transition: max-height .4s ease;
 }
 
 .food-card.active article{
     max-height: 500px;
-    opacity: 1;
 }
 
 .food-card img{
