@@ -118,13 +118,12 @@ body{
 
 .place-card article{
     max-height: 0;
-    opacity: 0;
     overflow: hidden;
-    transition: max-height .4s ease;
+    transition: max-height 0.5s;
 }
 
 .place-card.active article{
-    max-height: 500px;
+    max-height: 300px;
 }
 
 .place-card img{
@@ -192,13 +191,12 @@ body{
 
 .food-card article{
     max-height: 0;
-    opacity: 0;
     overflow: hidden;
-    transition: max-height .4s ease;
+    transition: max-height 0.5s;
 }
 
 .food-card.active article{
-    max-height: 500px;
+    max-height: 300px;
 }
 
 .food-card img{
@@ -371,7 +369,7 @@ body{
 @media (min-width: 769px){
     .place-card:hover article,
     .food-card:hover article{
-        max-height: 500px;
+        max-height: 300px;
         opacity:1;
     }
 
