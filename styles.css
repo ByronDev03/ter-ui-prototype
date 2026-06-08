@@ -36,9 +36,9 @@ header{
   top:0;
   left:0;
   z-index:1000;
-  backdrop-filter:blur(10px);
-  background:rgba(0,0,0,0.2);
-  border-bottom:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:none;
+  background: #fff;
+  border-bottom:1px solid #e5e7eb;
 }
 
 .logo{
@@ -78,7 +78,7 @@ header{
 .nav-links{
   display:flex;
   gap:2rem;
-  color:white;
+  color:#222;
   font-weight:500;
 }
 

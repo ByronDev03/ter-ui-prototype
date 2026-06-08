@@ -375,6 +375,23 @@ body{
 
 }
 
+/* Desktop */
+.footer-toggle{
+  display:block;
+  border:none;
+  background:none;
+  color:#D62828;
+  font-size:1.1rem;
+  font-weight:700;
+  margin-bottom:1rem;
+  cursor:default;
+  pointer-events:none;
+}
+
+.footer-toggle i{
+  display:none;
+}
+
 /* MOBILE */
 @media (max-width: 768px){
     .hero{
@@ -487,6 +504,7 @@ body{
         color:#D62828;
         padding:.75rem 1.5rem;
         cursor:pointer;
+        pointer-events: auto;
     }
 
     .footer-toggle i{
