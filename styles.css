@@ -581,8 +581,8 @@ header{
 /* FAQ */
 .faq{
   padding-top:100px;
-  padding-bottom: 220px;
-  margin-bottom: -6rem;
+  padding-bottom:120px;
+  margin-bottom:-6rem;
   background:
   linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.4)),
   linear-gradient(135deg,#C62828,#8E0000);
