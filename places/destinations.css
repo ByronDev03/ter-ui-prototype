@@ -262,7 +262,8 @@ body{
   display:grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1.2fr;
   gap:3rem;
-  padding:4rem 0;
+  padding:2.5rem 0;
+  align-items: start;
 }
 
 .footer-main{
