@@ -23,25 +23,20 @@
         <span class="logo-text">ESTRELLA ROJA DE CUAUTLA</span>
       </div>
 
-      <div class="menu-overlay"></div>
-      <div class="mobile-menu">
-        <button class="close-menu">
-          <i class="bi bi-x-lg"></i>
-        </button>
-        <ul id="links">
-          <li><a href="#" class="seleccionado" onclick="seleccionar(this)">Inicio</a></li>
-          <li><a href="#" class="seleccionado" onclick="seleccionar(this)">Destinos</a></li>
-          <li><a href="#" class="seleccionado" onclick="seleccionar(this)">Promociones</a></li>
-          <li><a href="#" class="seleccionado" onclick="seleccionar(this)">Contacto</a></li>
-        </ul>
-      </div>
+        <nav>
+            <div class="cerrar-menu" onclick="responsiveMenu()"><i class="bi bi-x-lg"></i></div>
+            <ul id="links">
+              <li><a href="#" class="seleccionado" onclick="seleccionar(this)">¿CÓMO FUNCIONA?</a></li>
+              <li><a href="#" class="seleccionado" onclick="seleccionar(this)">DESTINOS POPULARES</a></li>
+              <li><a href="#" class="seleccionado" onclick="seleccionar(this)">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Icono del menu responsive -->
+        <div id="icono-nav" onclick="responsiveMenu()"><i class="bi bi-list"></i></div>
 
       <button class="login-btn">
         Iniciar sesión
-      </button>
-
-      <button class="hamburger-btn">
-        <i class="bi bi-list"></i>
       </button>
     </div>
   </header>
@@ -107,173 +102,6 @@
         <button class="search-btn">
           Buscar viaje
         </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- DESTINATIONS -->
-  <section class="destinations">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>¿No sabes a dónde viajar?</h2>
-        <p>Conoce nuestros destinos TER y elige tu lugar favorito.</p>
-      </div>
-
-      <!-- DESKTOP COLLAGE -->
-      <div class="destinations-collage">
-
-        <!-- CARD 1-->
-        <div class="destination-item large">
-          <a href="/places/cuautla.html" class="destination-link">
-            <img src="assets/cuautla.avif" alt="Cuautla">
-            <div class="destination-overlay">
-              <span class="destination-pill">Cuautla</span>
-              <p>Descubre una ciudad llena de historia, cultura que marcó el rumbo de México.</p>
-            </div>
-          </a>
-        </div>
-            
-        <!-- CARD 2-->
-        <div class="destination-item">
-          <a href="/places/cuernavaca.html" class="destination-link">
-            <img src="assets/cuernavaca.avif" alt="Cuernavaca">
-            <div class="destination-overlay">
-              <span class="destination-pill">Cuernavaca</span>
-              <p>Disfruta la ciudad de la eterna primavera, donde el sol abraza y la historia inspira.</p>
-            </div>
-          </a>
-        </div>
-         
-        <!-- CARD 3-->
-        <div class="destination-item">
-          <a href="/places/cdmx.html" class="destination-link">
-            <img src="assets/cdmx.avif" alt="CDMX">
-            <div class="destination-overlay">
-              <span class="destination-pill">Ciudad de México</span>
-              <p>La metropolí que nunca duerme, un epicentro de historia y vanguardia.</p>
-            </div>
-          </a>
-        </div> 
-        
-        <!-- CARD 4-->
-        <div class="destination-item">
-          <a href="/places/puebla.html" class="destination-link">
-            <img src="assets/puebla.avif" alt="Puebla">
-            <div class="destination-overlay">
-              <span class="destination-pill">Puebla</span>
-              <p>Arquitectura colonial, gastronomía única y una riqueza cultural incomparable.</p>
-            </div>
-          </a>
-        </div> 
-              
-        
-        <!-- CARD 5-->
-        <div class="destination-item">
-          <a href="/places/iguala.html" class="destination-link">
-            <img src="assets/iguala.avif" alt="Iguala">
-            <div class="destination-overlay">
-              <span class="destination-pill">Iguala</span>
-              <p>Cuna de la independencia, un símbolo de historia y unión.</p>
-            </div>
-          </a>
-        </div> 
-        
-        <!-- CARD 6-->
-        <div class="destination-item">
-          <a href="/places/tepoztlan.html" class="destination-link">
-            <img src="assets/tepoztlan.avif" alt="Tepoztlan">
-            <div class="destination-overlay">
-              <span class="destination-pill">Tepoztlán</span>
-              <p>Misticismo, naturaleza y paisajes que invitan a desconectar y explorar.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- MOBILE CAROUSEL -->
-      <div class="mobile-carousel">
-        <div class="mobile-track">
-
-          <!-- SLIDE 1 -->
-          <div class="mobile-card">
-            <a href="/places/cuautla.html" class="destination-link">
-              <img src="assets/cuautla.avif" alt="Cuautla">
-              <div class="mobile-overlay">
-                <span class="destination-pill">Cuautla</span>
-                <p>Descubre una ciudad llena de historia, cultura que marcó el rumbo de México.</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- SLIDE 2 -->
-          <div class="mobile-card">
-            <a href="/places/cuernavaca.html" class="destination-link">
-              <img src="assets/cuernavaca.avif" alt="Cuernavaca">
-              <div class="mobile-overlay">
-                <span class="destination-pill">Cuernavaca</span>
-                <p>Disfruta la ciudad de la eterna primavera, donde el sol abraza y la historia inspira.</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- SLIDE 3 -->
-          <div class="mobile-card">
-            <a href="/places/cdmx.html" class="destination-link">
-              <img src="assets/cdmx.avif" alt="CDMX">
-              <div class="mobile-overlay">
-                <span class="destination-pill">Ciudad de México</span>
-                <p>La metropolí que nunca duerme, un epicentro de historia y vanguardia.</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- SLIDE 4 -->
-          <div class="mobile-card">
-            <a href="/places/puebla.html" class="destination-link">
-              <img src="assets/puebla.avif" alt="Puebla">
-              <div class="mobile-overlay">
-                <span class="destination-pill">Puebla</span>
-                <p>Arquitectura colonial, gastronomía única y una riqueza cultural incomparable.</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- SLIDE 5 -->
-          <div class="mobile-card">
-            <a href="/places/iguala.html" class="destination-link">
-              <img src="assets/iguala.avif" alt="Iguala">
-              <div class="mobile-overlay">
-                <span class="destination-pill">Iguala</span>
-                <p>Cuna de la independencia, un símbolo de historia y unión.</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- SLIDE 6 -->
-          <div class="mobile-card">
-            <a href="/places/tepoztlan.html" class="destination-link">
-              <img src="assets/tepoztlan.avif" alt="Tepoztlán">
-              <div class="mobile-overlay">
-                <span class="destination-pill">Tepoztlán</span>
-                <p>Misticismo, naturaleza y paisajes que invitan a desconectar y explorar.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="carousel-dots">
-          <span class="active"></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
       </div>
     </div>
   </section>
@@ -282,8 +110,8 @@
   <section class="benefits">
     <div class="container">
       <div class="section-title">
-        <h2>¿Por qué viajar con TER?</h2>
-        <p>Una experiencia moderna y cómoda para todos tus viajes.</p>
+        <h2>Compra tu boleto en 3 pasos</h2>
+        <p>P</p>
       </div>
 
       <div class="benefits-grid">
@@ -310,6 +138,170 @@
           <h3>Todo desde tu celular</h3>
           <p>Consulta horarios y boletos directamente desde la app.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>¿No sabes a dónde viajar?</h2>
+        <p>Conoce nuestros destinos TER y elige tu lugar favorito.</p>
+      </div>
+
+      <!-- DESKTOP COLLAGE -->
+      <div class="destinations-collage">
+
+        <!-- CARD 1-->
+        <div class="destination-item large reveal">
+          <a href="/places/cuautla.html" class="destination-link">
+            <img src="assets/cuautla.avif" alt="Cuautla">
+            <div class="destination-overlay">
+              <span class="destination-pill">Cuautla</span>
+              <p>Descubre una ciudad llena de historia, cultura que marcó el rumbo de México.</p>
+            </div>
+          </a>
+        </div>
+            
+        <!-- CARD 2-->
+        <div class="destination-item reveal">
+          <a href="/places/cuernavaca.html" class="destination-link">
+            <img src="assets/cuernavaca.avif" alt="Cuernavaca">
+            <div class="destination-overlay">
+              <span class="destination-pill">Cuernavaca</span>
+              <p>Disfruta la ciudad de la eterna primavera, donde el sol abraza y la historia inspira.</p>
+            </div>
+          </a>
+        </div>
+         
+        <!-- CARD 3-->
+        <div class="destination-item reveal">
+          <a href="/places/cdmx.html" class="destination-link">
+            <img src="assets/cdmx.avif" alt="CDMX">
+            <div class="destination-overlay">
+              <span class="destination-pill">Ciudad de México</span>
+              <p>La metropolí que nunca duerme, un epicentro de historia y vanguardia.</p>
+            </div>
+          </a>
+        </div> 
+        
+        <!-- CARD 4-->
+        <div class="destination-item reveal">
+          <a href="/places/puebla.html" class="destination-link">
+            <img src="assets/puebla.avif" alt="Puebla">
+            <div class="destination-overlay">
+              <span class="destination-pill">Puebla</span>
+              <p>Arquitectura colonial, gastronomía única y una riqueza cultural incomparable.</p>
+            </div>
+          </a>
+        </div> 
+              
+        
+        <!-- CARD 5-->
+        <div class="destination-item reveal">
+          <a href="/places/iguala.html" class="destination-link">
+            <img src="assets/iguala.avif" alt="Iguala">
+            <div class="destination-overlay">
+              <span class="destination-pill">Iguala</span>
+              <p>Cuna de la independencia, un símbolo de historia y unión.</p>
+            </div>
+          </a>
+        </div> 
+        
+        <!-- CARD 6-->
+        <div class="destination-item reveal">
+          <a href="/places/tepoztlan.html" class="destination-link">
+            <img src="assets/tepoztlan.avif" alt="Tepoztlan">
+            <div class="destination-overlay">
+              <span class="destination-pill">Tepoztlán</span>
+              <p>Misticismo, naturaleza y paisajes que invitan a desconectar y explorar.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- MOBILE CAROUSEL -->
+      <div class="mobile-carousel">
+        <div class="mobile-track">
+
+          <!-- SLIDE 1 -->
+          <div class="mobile-card reveal">
+            <a href="/places/cuautla.html" class="destination-link">
+              <img src="assets/cuautla.avif" alt="Cuautla">
+              <div class="mobile-overlay">
+                <span class="destination-pill">Cuautla</span>
+                <p>Descubre una ciudad llena de historia, cultura que marcó el rumbo de México.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="mobile-card reveal">
+            <a href="/places/cuernavaca.html" class="destination-link">
+              <img src="assets/cuernavaca.avif" alt="Cuernavaca">
+              <div class="mobile-overlay">
+                <span class="destination-pill">Cuernavaca</span>
+                <p>Disfruta la ciudad de la eterna primavera, donde el sol abraza y la historia inspira.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div class="mobile-card reveal">
+            <a href="/places/cdmx.html" class="destination-link">
+              <img src="assets/cdmx.avif" alt="CDMX">
+              <div class="mobile-overlay">
+                <span class="destination-pill">Ciudad de México</span>
+                <p>La metropolí que nunca duerme, un epicentro de historia y vanguardia.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- SLIDE 4 -->
+          <div class="mobile-card reveal">
+            <a href="/places/puebla.html" class="destination-link">
+              <img src="assets/puebla.avif" alt="Puebla">
+              <div class="mobile-overlay">
+                <span class="destination-pill">Puebla</span>
+                <p>Arquitectura colonial, gastronomía única y una riqueza cultural incomparable.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- SLIDE 5 -->
+          <div class="mobile-card reveal">
+            <a href="/places/iguala.html" class="destination-link">
+              <img src="assets/iguala.avif" alt="Iguala">
+              <div class="mobile-overlay">
+                <span class="destination-pill">Iguala</span>
+                <p>Cuna de la independencia, un símbolo de historia y unión.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- SLIDE 6 -->
+          <div class="mobile-card reveal">
+            <a href="/places/tepoztlan.html" class="destination-link">
+              <img src="assets/tepoztlan.avif" alt="Tepoztlán">
+              <div class="mobile-overlay">
+                <span class="destination-pill">Tepoztlán</span>
+                <p>Misticismo, naturaleza y paisajes que invitan a desconectar y explorar.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="carousel-dots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </div>
     </div>
   </section>

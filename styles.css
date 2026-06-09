@@ -914,3 +914,24 @@ header{
     transform:rotate(180deg);
   }
 }
+
+/* =========================
+   ANIMATIONS
+========================= */
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(6px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
