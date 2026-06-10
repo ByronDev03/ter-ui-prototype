@@ -14,32 +14,46 @@
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="container navbar">
+  <!-- SECCIÓN BARRA DE OPCIONES -->
+  <section id="inicio">
+    <div class="contenido">
+      <header>
+        <div class="contenido-header">
 
-      <div class="logo">
-        <img class="logo-main" src="assets/logo_ter.svg" alt="TER Logo">
-        <span class="logo-text">ESTRELLA ROJA DE CUAUTLA</span>
-      </div>
+          <div class="logo">
+            <img class="logo-main" src="assets/logo_ter.svg" alt="TER Logo">
+            <span class="logo-text">ESTRELLA ROJA DE CUAUTLA</span>
+          </div>
 
-        <nav>
-            <div class="cerrar-menu" onclick="responsiveMenu()"><i class="bi bi-x-lg"></i></div>
+          <nav id="nav">
+            <div class="cerrar-menu" onclick="responsiveMenu()">
+              <i class="bi bi-x-lg"></i>
+            </div>
+
             <ul id="links">
-              <li><a href="#" class="seleccionado" onclick="seleccionar(this)">¿CÓMO FUNCIONA?</a></li>
-              <li><a href="#" class="seleccionado" onclick="seleccionar(this)">DESTINOS POPULARES</a></li>
-              <li><a href="#" class="seleccionado" onclick="seleccionar(this)">FAQ</a></li>
+              <li><a href="#" onclick="seleccionar(this)">¿CÓMO FUNCIONA?</a></li>
+              <li><a href="#benefits" onclick="seleccionar(this)">DESTINOS POPULARES</a></li>
+              <li><a href="#faq" onclick="seleccionar(this)">FAQ</a></li>
             </ul>
-        </nav>
 
-        <!-- Icono del menu responsive -->
-        <div id="icono-nav" onclick="responsiveMenu()"><i class="bi bi-list"></i></div>
-
-      <button class="login-btn">
-        Iniciar sesión
-      </button>
+            <!-- Desktop -->
+            <button class="login-btn-mobile">
+              Iniciar sesión
+            </button>
+          </nav>
+          <!-- Mobile -->
+          <button class="login-btn">
+            Iniciar sesión
+          </button>
+          <!-- Icono del menu responsive -->
+          <div id="icono-nav" onclick="responsiveMenu()">
+            <i class="bi bi-list"></i>
+          </div>
+        </div>
+      </header>
     </div>
-  </header>
+  </section>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -107,7 +121,7 @@
   </section>
 
   <!-- BENEFITS -->
-  <section class="benefits">
+  <section id="benefits">
     <div class="container">
       <div class="section-title">
         <h2>Compra tu boleto en 3 pasos</h2>
@@ -227,7 +241,7 @@
         <div class="mobile-track">
 
           <!-- SLIDE 1 -->
-          <div class="mobile-card reveal">
+          <div class="mobile-card">
             <a href="/places/cuautla.html" class="destination-link">
               <img src="assets/cuautla.avif" alt="Cuautla">
               <div class="mobile-overlay">
@@ -238,7 +252,7 @@
           </div>
 
           <!-- SLIDE 2 -->
-          <div class="mobile-card reveal">
+          <div class="mobile-card">
             <a href="/places/cuernavaca.html" class="destination-link">
               <img src="assets/cuernavaca.avif" alt="Cuernavaca">
               <div class="mobile-overlay">
@@ -249,7 +263,7 @@
           </div>
 
           <!-- SLIDE 3 -->
-          <div class="mobile-card reveal">
+          <div class="mobile-card">
             <a href="/places/cdmx.html" class="destination-link">
               <img src="assets/cdmx.avif" alt="CDMX">
               <div class="mobile-overlay">
@@ -260,7 +274,7 @@
           </div>
 
           <!-- SLIDE 4 -->
-          <div class="mobile-card reveal">
+          <div class="mobile-card">
             <a href="/places/puebla.html" class="destination-link">
               <img src="assets/puebla.avif" alt="Puebla">
               <div class="mobile-overlay">
@@ -271,7 +285,7 @@
           </div>
 
           <!-- SLIDE 5 -->
-          <div class="mobile-card reveal">
+          <div class="mobile-card">
             <a href="/places/iguala.html" class="destination-link">
               <img src="assets/iguala.avif" alt="Iguala">
               <div class="mobile-overlay">
@@ -282,7 +296,7 @@
           </div>
 
           <!-- SLIDE 6 -->
-          <div class="mobile-card reveal">
+          <div class="mobile-card">
             <a href="/places/tepoztlan.html" class="destination-link">
               <img src="assets/tepoztlan.avif" alt="Tepoztlán">
               <div class="mobile-overlay">
@@ -307,7 +321,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="faq" id="faq">
+  <section id="faq">
     <div class="container">
       <div class="section-title">
         <h2>Preguntas <span>frecuentes</span></h2>

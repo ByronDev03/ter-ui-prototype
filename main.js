@@ -1,3 +1,22 @@
+function responsiveMenu() {
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("responsive");
+}
+
+function seleccionar(link){
+  document.querySelectorAll("#links a").forEach(a=>{
+    a.classList.remove("seleccionado");
+  });
+
+  link.classList.add("seleccionado");
+
+  document.getElementById("nav")
+    .classList.remove("responsive");
+}
+
+
+
+
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
