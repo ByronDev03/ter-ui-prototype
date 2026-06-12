@@ -85,3 +85,33 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+
+
+
+
+const track = document.querySelector('.mobile-track');
+const cards = document.querySelectorAll('.mobile-card');
+const dots = document.querySelectorAll('.carousel-dots span');
+
+if(track && cards.length && dots.length){
+
+  track.addEventListener('scroll', () => {
+
+    const cardWidth =
+      cards[0].offsetWidth +
+      parseInt(getComputedStyle(track).gap);
+
+    const index =
+      Math.round(track.scrollLeft / cardWidth);
+
+    dots.forEach(dot =>
+      dot.classList.remove('active')
+    );
+
+    if(dots[index]){
+      dots[index].classList.add('active');
+    }
+
+  });
+
+}
