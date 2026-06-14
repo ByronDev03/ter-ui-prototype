@@ -8,6 +8,46 @@
     <link rel="stylesheet" href="/places/destinations.css">
 </head>
 <body>
+    <!-- SECCIÓN BARRA DE OPCIONES -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+
+                    <div class="logo">
+                        <img class="logo-main" src="/assets/logo_ter.svg" alt="TER Logo">
+                        <span class="logo-text">ESTRELLA ROJA DE CUAUTLA</span>
+                    </div>
+
+                    <nav id="nav">
+                        <div class="cerrar-menu" onclick="responsiveMenu()">
+                            <i class="bi bi-x-lg"></i>
+                        </div>
+
+                        <ul id="links">
+                            <li><a href="#" onclick="seleccionar(this)">¿CÓMO FUNCIONA?</a></li>
+                            <li><a href="#" onclick="seleccionar(this)">DESTINOS POPULARES</a></li>
+                            <li><a href="#faq" onclick="seleccionar(this)">FAQ</a></l>
+                        </ul>
+
+                        <!-- Desktop -->
+                        <button class="login-btn-mobile">
+                            Iniciar sesión
+                        </button>
+                    </nav>
+
+                    <!-- Mobile -->
+                    <button class="login-btn">
+                        Iniciar sesión
+                    </button>
+                    <!-- Icono del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="bi bi-list"></i>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </section>
 
     <!-- HERO -->
     <section class="hero">
@@ -263,6 +303,5 @@
     </footer>
 
     <script src="/places/destinations.js"></script>
-    <script src="/places/card-accordion.js"></script>
 </body>
 </html>
