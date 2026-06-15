@@ -32,7 +32,7 @@
 
             <ul id="links">
               <li><a href="#" onclick="seleccionar(this)">¿CÓMO FUNCIONA?</a></li>
-              <li><a href="#" onclick="seleccionar(this)">DESTINOS POPULARES</a></li>
+              <li><a href="#process" onclick="seleccionar(this)">DESTINOS POPULARES</a></li>
               <li><a href="#faq" onclick="seleccionar(this)">FAQ</a></li>
             </ul>
 
@@ -120,37 +120,42 @@
     </div>
   </section>
 
-  <!-- BENEFITS -->
-  <section id="benefits">
+  <!-- PROCESS -->
+  <section class="process" id="process">
     <div class="container">
       <div class="section-title">
-        <h2>Compra tu boleto en 3 pasos</h2>
-        <p>P</p>
+        <h2>Compra tu boleto en <span> 3 pasos</span></h2>
+        <p>Reserva tu viaje en minutos con un proceso rápido, sencillo y completamente digital.</p>
       </div>
 
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <i class="bi bi-ticket-perforated"></i>
-          <h3>Compra anticipada</h3>
-          <p>Reserva fácilmente tus viajes desde cualquier lugar.</p>
+      <div class="steps-container">
+        <div class="steps-line"></div>
+        
+        <!-- PASO 1 -->
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="bi bi-geo-alt"></i>
+          </div>
+          <h3>Seleciona tu viaje</h3>
+          <p>Elige origen, destino y fecha para encontrar las opciones que mejor se adapten a ti.</p>
         </div>
 
-        <div class="benefit-card">
-          <i class="bi bi-shield-check"></i>
-          <h3>Viajes seguros</h3>
-          <p>Protocolos y unidades modernas para mayor tranquilidad.</p>
+        <!-- PASO 2 -->
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="bi bi-ticket-perforated"></i>
+          </div>
+          <h3>Compra tu boleto</h3>
+          <p>Realiza tu pago de forma rápida y segura desde cualquier dispositivo.</p>
         </div>
 
-        <div class="benefit-card">
-          <i class="bi bi-wifi"></i>
-          <h3>Comodidad premium</h3>
-          <p>Asientos cómodos y servicios durante el viaje.</p>
-        </div>
-
-        <div class="benefit-card">
-          <i class="bi bi-phone"></i>
-          <h3>Todo desde tu celular</h3>
-          <p>Consulta horarios y boletos directamente desde la app.</p>
+        <!-- PASO 3 -->
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="bi bi-bus-front"></i>
+          </div>
+          <h3>¡Listo para viajar!</h3>
+          <p>Presenta tu boleto digital al abordar y disfruta de tu viaje con TER.</p>
         </div>
       </div>
     </div>
