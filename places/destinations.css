@@ -691,6 +691,7 @@ a{
     }
 
     .footer-toggle i{
+        display:inline-block;
         font-size:1.6rem;
         transition:.3s;
     }
