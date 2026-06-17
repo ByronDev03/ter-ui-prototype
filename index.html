@@ -57,66 +57,102 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>
-          Compra tus boletos en línea con TER
-        </h1>
 
-        <p>
-          Viaja de forma cómoda, rápida y segura.
-          Reserva tus viajes con compra anticipada desde cualquier lugar.
-        </p>
+    <!-- Carrusel -->
+    <div class="hero-slider">
 
+      <div class="hero-slide active">
+        <img src="/assets/ter1.avif" alt="Viaja con TER">
+
+        <div class="hero-overlay">
+          <div class="container">
+            
+            <div class="hero-content">
+              <span class="hero-badge">
+                Explora México con TER
+              </span>
+              
+              <h1>
+                Tu próxima aventura comienza aquí
+              </h1>
+              
+              <p>
+                Compra tus boletos en línea y descubre
+                destinos llenos de historia, cultura y
+                experiencias inolvidables.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+      
+      <div class="hero-slide">
+        <img src="/assets/ter2.avif" alt="Destinos TER">
+      </div>
+      
+      <div class="hero-slide">
+        <img src="/assets/ter3.avif" alt="Autobuses TER">
+      </div>
+    
+    </div>
+    
+    <!-- Buscador -->
+    <div class="search-card">
+      
+      <div class="search-grid">
 
-      <!-- SEARCH CARD -->
-      <div class="search-card">
-        <h2>Encuentra tu próximo viaje</h2>
-        <div class="input-group">
+        <div class="search-box">
           <label>Origen</label>
-          <div class="input-wrapper">
+
+          <button class="search-field">
             <i class="bi bi-geo-alt"></i>
-            <input type="text" placeholder="Cuautla">
-          </div>
+            <span>¿Desde dónde viajas?</span>
+          </button>
         </div>
-
-        <div class="input-group">
+        
+        <button class="swap-btn">
+          <i class="bi bi-arrow-left-right"></i>
+        </button>
+        
+        <div class="search-box">
           <label>Destino</label>
-
-          <div class="input-wrapper">
+          
+          <button class="search-field">
             <i class="bi bi-bus-front"></i>
-            <input type="text" placeholder="Ciudad de México">
-          </div>
+            <span>¿Hacia dónde viajas?</span>
+          </button>
         </div>
-
-        <div class="input-group">
+        
+        <div class="search-box">
           <label>Fecha</label>
-
-          <div class="input-wrapper">
+          
+          <button class="search-field">
             <i class="bi bi-calendar-event"></i>
-            <input type="date">
-          </div>
+            <span>Seleccionar fecha</span>
+          </button>
         </div>
-
-        <div class="input-group">
+        
+        <div class="search-box">
           <label>Pasajeros</label>
-
-          <div class="input-wrapper">
+          
+          <button class="search-field">
             <i class="bi bi-people"></i>
-
-            <select>
-              <option>1 Adulto</option>
-              <option>2 Adultos</option>
-              <option>3 Adultos</option>
-            </select>
-          </div>
+            <span>1 Adulto</span>
+          </button>
         </div>
-
-        <button class="search-btn">
+        
+        <button class="btn-search">
           Buscar viaje
+          <i class="bi bi-arrow-right"></i>
         </button>
       </div>
+    </div>
+    
+    <!-- Dots -->
+    <div class="hero-dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
     </div>
   </section>
 

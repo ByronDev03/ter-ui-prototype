@@ -153,35 +153,199 @@ ul{
   HERO
 ========================= */
 .hero{
-  min-height:100vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.4)),
-  linear-gradient(135deg,#C62828,#8E0000);
+  position:relative;
+  min-height:90vh;
+  overflow:hidden;
+}
+
+/* Slider */
+.hero-slider{
+  position:absolute;
+  inset:0;
+}
+
+.hero-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1s ease;
+}
+
+.hero-slide.active{
+  opacity:1;
+}
+
+.hero-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Overlay */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.35));
   display:flex;
   align-items:center;
-  justify-content:center;
-  padding-top:100px;
+  padding-bottom:100px;
 }
 
+/* Contenido */
 .hero-content{
-  display:grid;
-  grid-template-columns:1fr 420px;
-  align-items:center;
-  gap:4rem;
+  max-width:700px;
+  color:white;
 }
 
-.hero-text h1{
+.hero-badge{
+  display:inline-block;
+  padding:.6rem 1.2rem;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+  margin-bottom:1.5rem;
+}
+
+.hero-content h1{
   font-size:4rem;
-  color:white;
   line-height:1.1;
   margin-bottom:1.5rem;
 }
 
-.hero-text p{
-  color:rgba(255,255,255,0.85);
-  font-size:1.1rem;
+.hero-content p{
+  font-size:1.15rem;
   line-height:1.8;
-  max-width:550px;
+  max-width:600px;
+}
+
+/* Buscador */
+.search-card{
+  position:absolute;
+  left:50%;
+  bottom:50px;
+  transform:translateX(-50%);
+  width:min(1200px,90%);
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(18px);
+  border-radius:32px;
+  padding:2rem;
+  box-shadow: 0 25px 60px rgba(0,0,0,.18);
+  z-index:10;
+  animation:floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+    50%{
+        transform:
+        translateX(-50%)
+        translateY(-5px);
+    }
+}
+
+/* Grid */
+.search-grid{
+  display:grid;
+  grid-template-columns:1fr auto 1fr 1fr 1fr auto;
+  gap:1rem;
+  align-items:end;
+}
+
+/* Boxes */
+.search-box{
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+}
+
+.search-box label{
+  font-weight:600;
+  color:#555;
+}
+
+/* Inputs */
+.search-field{
+  border:none;
+  background:#f5f5f5;
+  height:70px;
+  border-radius:22px;
+  padding:0 1.25rem;
+  display:flex;
+  align-items:center;
+  gap:.85rem;
+  font-size:1rem;
+  color:#444;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.search-field:hover{
+  background:#eeeeee;
+}
+
+/* Iconos */
+.search-field i{
+  color:#C62828;
+  font-size:1.2rem;
+}
+
+/* Botón Intercambiar */
+.swap-btn{
+  width:55px;
+  height:55px;
+  border:none;
+  border-radius:18px;
+  background:#C62828;
+  color:white;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.swap-btn:hover{
+  transform:rotate(180deg);
+}
+
+/* Botón Buscar */
+.btn-search{
+  border:none;
+  height:70px;
+  padding:0 2rem;
+  border-radius:22px;
+  background:#C62828;
+  color:white;
+  font-weight:600;
+  font-size:1rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  transition:.3s;
+}
+
+.btn-search:hover{
+  background:#b71c1c;
+  transform:translateY(-3px);
+}
+
+/* Dots */
+.hero-dots{
+  position:absolute;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:.75rem;
+  z-index:5;
+}
+
+.hero-dots span{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:rgba(255,255,255,.45);
+}
+
+.hero-dots span.active{
+  background:white;
 }
 
 /* =========================
@@ -790,13 +954,12 @@ ul{
   RESPONSIVE 992px
 ========================= */
 @media(max-width:992px){
-  .hero-content{
-    grid-template-columns:1fr;
-    text-align:center;
+  .hero-container{
+    gap:2rem;
   }
 
-  .hero-text h1{
-        font-size:3rem;
+  .hero-copy h1{
+    font-size:3rem;
   }
 
   .footer-grid{
@@ -816,12 +979,41 @@ ul{
     display:block;
   }
 
-  .hero-text h1{
-    font-size:2.5rem;
+  .search-card{
+    position:static;
+    transform:none;
+    width:100%;
+    margin-top:2rem;
   }
 
-  .search-card{
-    padding:1.5rem;
+  .hero{
+    min-height:100vh;
+  }
+
+  .hero-overlay{
+    position:relative;
+    padding-top:120px;
+    padding-bottom:3rem;
+    align-items:flex-start;
+  }
+
+  .hero .container{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .hero-content{
+    max-width:100%;
+  }
+
+  .hero-content h1{
+    font-size:3rem;
+    line-height:1.1;
+  }
+
+  .hero-content p{
+    font-size:1rem;
+    margin-top:1rem;
   }
 
   .section-title h2{
