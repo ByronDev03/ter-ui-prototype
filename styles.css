@@ -980,40 +980,31 @@ ul{
   }
 
   .search-card{
-    position:static;
-    transform:none;
-    width:100%;
-    margin-top:2rem;
-  }
-
-  .hero{
-    min-height:100vh;
-  }
-
-  .hero-overlay{
     position:relative;
-    padding-top:120px;
-    padding-bottom:3rem;
-    align-items:flex-start;
-  }
-
-  .hero .container{
-    display:flex;
-    flex-direction:column;
+    left:auto;
+    bottom:auto;
+    transform:none;
+    width:92%;
+    margin:2rem auto 0;
+    padding:1.25rem;
   }
 
   .hero-content{
     max-width:100%;
   }
 
+  .hero-overlay{
+    padding-top:130px;
+  }
+
   .hero-content h1{
-    font-size:3rem;
-    line-height:1.1;
+    font-size:3.2rem;
+    max-width:260px;
   }
 
   .hero-content p{
-    font-size:1rem;
-    margin-top:1rem;
+    max-width: 300px;
+    line-height: 1.6;
   }
 
   .section-title h2{
