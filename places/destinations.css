@@ -64,14 +64,36 @@ a{
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 
-#inicio .contenido header .contenido-header nav ul li a:hover {
-    color: #D62828;
+#inicio .contenido header .contenido-header nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-6px;
+    height:2px;
+    background:#D62828;
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform .35s ease;
 }
 
-#inicio .contenido header .contenido-header .seleccionado {
-    color: #D62828;
+#inicio .contenido header .contenido-header nav ul li a:hover{
+    color:#D62828;
+}
+
+#inicio .contenido header .contenido-header nav ul li a:hover::after{
+    transform:scaleX(1);
+}
+
+#inicio .contenido header .contenido-header .seleccionado{
+    color:#D62828;
+}
+
+#inicio .contenido header .contenido-header .seleccionado::after{
+    transform:scaleX(1);
 }
 
 .logo{
@@ -565,6 +587,7 @@ a{
     #inicio .contenido header .contenido-header nav ul li a{
         justify-content:flex-start;
         font-size:1.1rem;
+        width:fit-content;
     }
 
     .login-btn-mobile{
