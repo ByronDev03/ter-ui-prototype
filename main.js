@@ -91,9 +91,9 @@ revealOnScroll();
 
 const track = document.querySelector('.mobile-track');
 const cards = document.querySelectorAll('.mobile-card');
-const dots = document.querySelectorAll('.carousel-dots span');
+const mobileDots = document.querySelectorAll('.carousel-dots span');
 
-if(track && cards.length && dots.length){
+if(track && cards.length && mobileDots.length){
 
   track.addEventListener('scroll', () => {
 
@@ -104,14 +104,59 @@ if(track && cards.length && dots.length){
     const index =
       Math.round(track.scrollLeft / cardWidth);
 
-    dots.forEach(dot =>
+    mobileDots.forEach(dot =>
       dot.classList.remove('active')
     );
 
-    if(dots[index]){
-      dots[index].classList.add('active');
+    if(mobileDots[index]){
+      mobileDots[index].classList.add('active');
     }
 
   });
+
+}
+
+
+
+
+const slides =
+document.querySelectorAll('.hero-slide');
+
+const heroDots =
+document.querySelectorAll('.hero-dots span');
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide =>
+        slide.classList.remove('active')
+    );
+
+    heroDots.forEach(dot =>
+        dot.classList.remove('active')
+    );
+
+    slides[index]
+        .classList.add('active');
+
+    heroDots[index]
+        .classList.add('active');
+}
+
+if (slides.length && heroDots.length) {
+  showSlide(0);
+
+  setInterval(() => {
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+  }, 4500);
 
 }
