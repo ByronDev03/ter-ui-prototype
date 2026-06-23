@@ -14,7 +14,208 @@ function seleccionar(link){
     .classList.remove("responsive");
 }
 
+const destinosTER = [
+  "CUAUTLA",
+  "CUERNAVACA",
+  "CDMX",
+  "PUEBLA",
+  "TEPOZTLÁN",
+  "IGUALA",
+  "AXOCHIAPAN",
+  "YAUTEPEC",
+  "YECAPIXTLA",
+  "TAXQUEÑA"
+];
 
+const viajesTER = [
+  {
+    origen: "CUAUTLA",
+    destino: "TEPOZTLÁN",
+    salida: "05:20 a.m.",
+    llegada: "06:30 a.m.",
+    precio: 38
+  },
+  {
+    origen: "CUAUTLA",
+    destino: "TEPOZTLÁN",
+    salida: "07:00 a.m.",
+    llegada: "08:10 a.m.",
+    precio: 38
+  },
+  {
+    origen: "CUAUTLA",
+    destino: "CUERNAVACA",
+    salida: "06:00 a.m.",
+    llegada: "07:00 a.m.",
+    precio: 45
+  },
+  {
+    origen: "CUAUTLA",
+    destino: "CDMX",
+    salida: "08:30 a.m.",
+    llegada: "10:30 a.m.",
+    precio: 150
+  }
+];
+
+const originField =
+document.getElementById(
+  "originField"
+);
+
+const destinationField =
+document.getElementById(
+  "destinationField"
+);
+
+const originText =
+document.getElementById(
+  "originText"
+);
+
+const destinationText =
+document.getElementById(
+  "destinationText"
+);
+
+const originDropdown =
+document.getElementById(
+  "originDropdown"
+);
+
+const destinationDropdown =
+document.getElementById(
+  "destinationDropdown"
+);
+
+let selectedOrigin = "";
+let selectedDestination = "";
+
+function openDropdown(dropdown, items, callback){
+
+  dropdown.innerHTML = "";
+
+  items.forEach(item => {
+
+    const button =
+      document.createElement("button");
+
+    button.className =
+      "dropdown-item";
+
+    button.textContent =
+      item;
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        callback(item);
+
+        dropdown.classList.remove(
+          "show"
+        );
+
+      }
+    );
+
+    dropdown.appendChild(button);
+
+  });
+
+  dropdown.classList.add(
+    "show"
+  );
+}
+
+originField?.addEventListener(
+  "click",
+  () => {
+
+    openDropdown(
+      originDropdown,
+      destinosTER,
+      (item) => {
+
+        selectedOrigin =
+          item;
+
+        originText.textContent =
+          item;
+
+        selectedDestination =
+          "";
+
+        destinationText.textContent =
+          "¿Hacia dónde viajas?";
+
+      }
+    );
+
+  }
+);
+
+destinationField?.addEventListener(
+  "click",
+  () => {
+
+    if(!selectedOrigin)
+      return;
+
+    const destinosDisponibles =
+      destinosTER.filter(
+        destino =>
+          destino !==
+          selectedOrigin
+      );
+
+    openDropdown(
+      destinationDropdown,
+      destinosDisponibles,
+      (item) => {
+
+        selectedDestination =
+          item;
+
+        destinationText.textContent =
+          item;
+      }
+    );
+
+  }
+);
+
+document.addEventListener(
+  "click",
+  (e) => {
+
+    if(
+      !originDropdown.contains(
+        e.target
+      ) &&
+      !originField.contains(
+        e.target
+      )
+    ){
+      originDropdown.classList.remove(
+        "show"
+      );
+    }
+
+    if(
+      !destinationDropdown.contains(
+        e.target
+      ) && 
+      !destinationField.contains(
+        e.target
+      )
+    ){
+      destinationDropdown.classList.remove(
+        "show"
+      );
+    }
+  }
+);
 
 
 const faqItems = document.querySelectorAll('.faq-item');

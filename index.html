@@ -144,26 +144,36 @@
       
       <div class="search-grid">
 
-        <div class="search-box">
+        <div class="search-box dropdown-container">
           <label>Origen</label>
 
-          <button class="search-field">
+          <button class="search-field" id="originField">
             <i class="bi bi-geo-alt"></i>
-            <span>¿Desde dónde viajas?</span>
+            <span id="originText">¿Desde dónde viajas?</span>
           </button>
+
+          <div 
+            class="search-dropdown" 
+            id="originDropdown">
+          </div>
         </div>
         
         <button class="swap-btn">
           <i class="bi bi-arrow-left-right"></i>
         </button>
         
-        <div class="search-box">
+        <div class="search-box dropdown-container">
           <label>Destino</label>
           
-          <button class="search-field">
+          <button class="search-field" id="destinationField">
             <i class="bi bi-bus-front"></i>
-            <span>¿Hacia dónde viajas?</span>
+            <span id="destinationText">¿Hacia dónde viajas?</span>
           </button>
+
+          <div 
+            class="search-dropdown" 
+            id="destinationDropdown">
+          </div>
         </div>
         
         <div class="search-box">
@@ -184,7 +194,7 @@
           </button>
         </div>
         
-        <button class="btn-search">
+        <button class="btn-search" id="searchTrip">
           Buscar viaje
           <i class="bi bi-arrow-right"></i>
         </button>
