@@ -126,15 +126,6 @@ ul{
   object-fit: contain;
 }
 
-.logo-text{
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: black;
-  margin-top: -9px;
-  line-height: 1;
-}
-
 .login-btn{
   background:#4CAF50;
   color:white;
@@ -177,13 +168,14 @@ ul{
 .hero{
   position:relative;
   min-height:90vh;
-  overflow:hidden;
+  overflow:visible;
 }
 
 /* Slider */
 .hero-slider{
   position:absolute;
   inset:0;
+  overflow:hidden;
 }
 
 .hero-slide{
@@ -872,17 +864,6 @@ ul{
 .footer-brand img{
   width: 140px;
   margin-bottom:0;
-  margin-left: 1.5rem;
-}
-
-.footer-brand-text{
-  display:block;
-  margin-top: -4px;
-  margin-bottom:1.25rem;
-  font-size:.85rem;
-  font-weight:700;
-  letter-spacing:2px;
-  color:#222;
   margin-left: 1.5rem;
 }
 
