@@ -14,18 +14,53 @@ function seleccionar(link){
     .classList.remove("responsive");
 }
 
-const destinosTER = [
-  "CUAUTLA",
-  "CUERNAVACA",
-  "CDMX",
-  "PUEBLA",
-  "TEPOZTLÁN",
-  "IGUALA",
-  "AXOCHIAPAN",
-  "YAUTEPEC",
-  "YECAPIXTLA",
-  "TAXQUEÑA"
-];
+const destinosTER = {
+  "Morelos": [
+    "Amacuzac, Mor.",
+    "Amayuca, Mor.",
+    "Anenecuilco, Mor.",
+    "Axochiapan, Mor.",
+    "Cuautla, Mor.",
+    "Cuautlixco, Mor.",
+    "Cuernavaca Casino, Mor.",
+    "Cuernavaca Centro, Mor.",
+    "Felipe Neri, Mor.",
+    "IMSS, Mor.",
+    "Jojutla, Mor.",
+    "Jonacatepec, Mor.",
+    "Oacalco, Mor.",
+    "Oaxtepec, Mor.",
+    "Paloma de la Paz, Mor.",
+    "Paloma de la Paz UAEM, Mor",
+    "Puente de Ixtla, Mor.",
+    "San Carlos, Mor.",
+    "Tejalpa, Mor.",
+    "Tepalcingo, Mor.",
+    "Tepoztlán, Mor.",
+    "Tlaltizapán, Mor.",
+    "Tlaquiltenango, Mor.",
+    "Tlayacapan, Mor.",
+    "Totolapan, Mor.",
+    "UAEM, Mor.",
+    "Villa de Ayala, Mor."
+  ].sort((a, b) => a.localeCompare(b, "es")),
+
+  "Guerrero": [
+    "Buenavista de Cuéllar, Gro.",
+    "Iguala, Gro."
+  ].sort((a, b) => a.localeCompare(b, "es")),
+
+  "Puebla": [
+    "2 Poniente, Pue.",
+    "Caseta Atlixcáyotl, Pue",
+    "Izúcar de Matamoros, Pue",
+    "Puebla CAPU, Pue"
+  ].sort((a, b) => a.localeCompare(b, "es")),
+
+  "Ciudad de México": [
+    "México Sur, CDMX."
+  ].sort((a, b) => a.localeCompare(b, "es")),
+};
 
 const viajesTER = [
   {
@@ -91,41 +126,124 @@ document.getElementById(
 let selectedOrigin = "";
 let selectedDestination = "";
 
-function openDropdown(dropdown, items, callback){
+function agruparPorLetra(destinos){
+
+  const grupos = {};
+
+  destinos.forEach(destino => {
+
+    const letra =
+      destino.charAt(0).toUpperCase();
+
+    if(!grupos[letra]){
+      grupos[letra] = [];
+    }
+
+    grupos[letra].push(destino);
+
+  });
+
+  return grupos;
+}
+
+function openDropdown(
+  dropdown,
+  callback
+){
 
   dropdown.innerHTML = "";
 
-  items.forEach(item => {
+  Object.entries(destinosTER)
+    .forEach(
+      ([estado, destinos]) => {
 
-    const button =
-      document.createElement("button");
+        const state =
+          document.createElement(
+            "div"
+          );
 
-    button.className =
-      "dropdown-item";
+        state.className =
+          "dropdown-state";
 
-    button.textContent =
-      item;
+        state.textContent =
+          estado;
 
-    button.addEventListener(
-      "click",
-      () => {
-
-        callback(item);
-
-        dropdown.classList.remove(
-          "show"
+        dropdown.appendChild(
+          state
         );
+
+        const grupos =
+          agruparPorLetra(
+            destinos
+          );
+
+        Object.entries(grupos)
+          .forEach(
+            ([letra, lugares]) => {
+
+              const letter =
+                document.createElement(
+                  "div"
+                );
+
+              letter.className =
+                "dropdown-letter";
+
+              letter.textContent =
+                letra;
+
+              dropdown.appendChild(
+                letter
+              );
+
+              lugares.forEach(
+                lugar => {
+
+                  const button =
+                    document.createElement(
+                      "button"
+                    );
+
+                  button.className =
+                    "dropdown-item";
+
+                  button.textContent =
+                    lugar;
+
+                  button.addEventListener(
+                    "click",
+                    () => {
+
+                      callback(
+                        lugar
+                      );
+
+                      dropdown
+                        .classList
+                        .remove(
+                          "show"
+                        );
+
+                    }
+                  );
+
+                  dropdown.appendChild(
+                    button
+                  );
+
+                }
+              );
+
+            }
+          );
 
       }
     );
 
-    dropdown.appendChild(button);
-
-  });
-
   dropdown.classList.add(
     "show"
   );
+
 }
 
 originField?.addEventListener(
@@ -134,7 +252,6 @@ originField?.addEventListener(
 
     openDropdown(
       originDropdown,
-      destinosTER,
       (item) => {
 
         selectedOrigin =
@@ -162,23 +279,20 @@ destinationField?.addEventListener(
     if(!selectedOrigin)
       return;
 
-    const destinosDisponibles =
-      destinosTER.filter(
-        destino =>
-          destino !==
-          selectedOrigin
-      );
-
     openDropdown(
       destinationDropdown,
-      destinosDisponibles,
       (item) => {
 
-        selectedDestination =
-          item;
+        if(
+          item === 
+          selectedOrigin
+        ){
+          return;
+        }
 
-        destinationText.textContent =
-          item;
+        selectedDestination = item;
+
+        destinationText.textContent = item;
       }
     );
 
