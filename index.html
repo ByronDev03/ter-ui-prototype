@@ -175,13 +175,15 @@
           </div>
         </div>
         
-        <div class="search-box">
+        <div class="search-box dropdown-container">
           <label>Fecha</label>
           
-          <button class="search-field">
+          <button class="search-field" id="dateField">
             <i class="bi bi-calendar-event"></i>
-            <span>Seleccionar fecha</span>
+            <span id="dateText">Seleccionar fecha</span>
           </button>
+
+          <div class="search-dropdown calendar-dropdown" id="calendarDropdown"></div>
         </div>
         
         <div class="search-box">

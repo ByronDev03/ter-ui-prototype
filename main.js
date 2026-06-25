@@ -123,8 +123,17 @@ document.getElementById(
   "destinationDropdown"
 );
 
+const dateField = document.getElementById("dateField");
+const dateText = document.getElementById("dateText");
+const calendarDropdown = document.getElementById("calendarDropdown");
+
 let selectedOrigin = "";
 let selectedDestination = "";
+
+let selectedDate = null;
+const today = new Date();
+let currentMonth = today.getMonth();
+let currentYear = today.getFullYear();
 
 function agruparPorLetra(destinos){
 
@@ -230,19 +239,207 @@ function openDropdown(
                   dropdown.appendChild(
                     button
                   );
-
                 }
               );
-
             }
           );
+      }
+    );
+  dropdown.classList.add(
+    "show"
+  );
+}
+
+const months = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre"
+];
+
+function renderCalendar(){
+
+  calendarDropdown.innerHTML = "";
+
+  const header =
+    document.createElement("div");
+
+  header.className =
+    "calendar-header";
+
+  header.innerHTML = `
+    <button id="prevMonth">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <span>
+      ${months[currentMonth]}
+      ${currentYear}
+    </span>
+
+    <button id="nextMonth">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  `;
+
+  calendarDropdown.appendChild(
+    header
+  );
+
+  const grid =
+    document.createElement("div");
+
+  grid.className =
+    "calendar-grid";
+
+  const weekDays = [
+    "DOM",
+    "LUN",
+    "MAR",
+    "MIÉ",
+    "JUE",
+    "VIE",
+    "SÁB"
+  ];
+
+  weekDays.forEach(day => {
+
+    const label =
+      document.createElement("div");
+
+    label.className =
+      "calendar-weekday";
+
+    label.textContent =
+      day;
+
+    grid.appendChild(label);
+
+  });
+
+  const firstDay =
+    new Date(
+      currentYear,
+      currentMonth,
+      1
+    ).getDay();
+
+  const daysInMonth =
+    new Date(
+      currentYear,
+      currentMonth + 1,
+      0
+    ).getDate();
+
+  for(
+    let i = 0;
+    i < firstDay;
+    i++
+  ){
+    const empty =
+      document.createElement("div");
+
+    grid.appendChild(
+      empty
+    );
+  }
+
+  for(
+    let day = 1;
+    day <= daysInMonth;
+    day++
+  ){
+
+    const button =
+      document.createElement(
+        "button"
+      );
+
+    button.className =
+      "calendar-day";
+
+    button.textContent =
+      day;
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        selectedDate =
+          new Date(
+            currentYear,
+            currentMonth,
+            day
+          );
+
+        dateText.textContent =
+          selectedDate.toLocaleDateString(
+            "es-MX",
+            {
+              day: "2-digit",
+              month: "short",
+              year: "numeric"
+            }
+          );
+
+        calendarDropdown
+          .classList
+          .remove("show");
 
       }
     );
 
-  dropdown.classList.add(
-    "show"
+    grid.appendChild(button);
+
+  }
+
+  calendarDropdown.appendChild(
+    grid
   );
+
+  document
+    .getElementById(
+      "prevMonth"
+    )
+    .addEventListener(
+      "click",
+      () => {
+
+        if(currentMonth > 0){
+
+          currentMonth--;
+
+          renderCalendar();
+        }
+
+      }
+    );
+
+  document
+    .getElementById(
+      "nextMonth"
+    )
+    .addEventListener(
+      "click",
+      () => {
+
+        if(currentMonth < 11){
+
+          currentMonth++;
+
+          renderCalendar();
+        }
+
+      }
+    );
 
 }
 
@@ -299,9 +496,32 @@ destinationField?.addEventListener(
   }
 );
 
+dateField?.addEventListener(
+  "click",
+  () => {
+    renderCalendar();
+    calendarDropdown.classList.add("show");
+  }
+);
+
 document.addEventListener(
   "click",
   (e) => {
+
+    if(
+      !calendarDropdown.contains(
+        e.target
+      ) &&
+      !dateField.contains(
+        e.target
+      )
+    ){
+
+      calendarDropdown.classList.remove(
+        "show"
+      );
+    }
+      
 
     if(
       !originDropdown.contains(
