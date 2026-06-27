@@ -123,6 +123,11 @@ document.getElementById(
   "destinationDropdown"
 );
 
+const swapBtn = 
+document.getElementById(
+  "swapBtn"
+);
+
 const dateField = document.getElementById("dateField");
 const dateText = document.getElementById("dateText");
 const calendarDropdown = document.getElementById("calendarDropdown");
@@ -136,6 +141,36 @@ calendarDropdown.addEventListener(
 
 let selectedOrigin = "";
 let selectedDestination = "";
+
+swapBtn?.addEventListener(
+  "click",
+  () => {
+
+    if(
+      !selectedOrigin ||
+      !selectedDestination
+    ){
+      return;
+    }
+
+    swapBtn.classList.add("swapping");
+
+    setTimeout(() => {
+      swapBtn.classList.remove(
+        "swapping"
+      );
+    }, 400);
+
+    [selectedOrigin, selectedDestination] = [
+      selectedDestination,
+      selectedOrigin
+    ];
+
+    originText.textContent = selectedOrigin;
+
+    destinationText.textContent = selectedDestination;
+  }
+);
 
 let selectedDate = null;
 const today = new Date();
