@@ -127,6 +127,13 @@ const dateField = document.getElementById("dateField");
 const dateText = document.getElementById("dateText");
 const calendarDropdown = document.getElementById("calendarDropdown");
 
+calendarDropdown.addEventListener(
+  "click",
+  (e) => {
+    e.stopPropagation();
+  }
+);
+
 let selectedOrigin = "";
 let selectedDestination = "";
 
@@ -339,11 +346,8 @@ function renderCalendar(){
       0
     ).getDate();
 
-  for(
-    let i = 0;
-    i < firstDay;
-    i++
-  ){
+  for(let i = 0; i < firstDay; i++)
+  {
     const empty =
       document.createElement("div");
 
@@ -352,22 +356,49 @@ function renderCalendar(){
     );
   }
 
-  for(
-    let day = 1;
-    day <= daysInMonth;
-    day++
-  ){
-
-    const button =
-      document.createElement(
-        "button"
-      );
+  for(let day = 1; day <= daysInMonth;day++)
+  {
+    const button = document.createElement("button");
 
     button.className =
       "calendar-day";
 
     button.textContent =
       day;
+
+    const date = new Date(
+      currentYear,
+      currentMonth,
+      day
+    );
+
+    const todayDate = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate()
+    );
+
+    if (date < todayDate){
+      button.classList.add("disabled");
+        button.disabled = true;
+    }
+
+    if(
+      day === today.getDate() && 
+        currentMonth === today.getMonth() &&
+        currentYear === today.getFullYear()
+    ){
+      button.classList.add("today");
+    }
+
+    if (
+      selectedDate && 
+      day === selectedDate.getDate() &&
+      currentMonth === selectedDate.getMonth() &&
+      currentYear === selectedDate.getFullYear()
+    ){
+      button.classList.add("selected");
+    }
 
     button.addEventListener(
       "click",
@@ -406,41 +437,54 @@ function renderCalendar(){
   );
 
   document
-    .getElementById(
-      "prevMonth"
-    )
+    .getElementById("prevMonth")
     .addEventListener(
       "click",
-      () => {
+      (e) => {
+        e.stopPropagation();
 
-        if(currentMonth > 0){
-
-          currentMonth--;
+        if(currentMonth === 0 && currentYear > today.getFullYear())
+          {
+            currentMonth = 11;
+            currentYear--;
+          }
+          else if(currentMonth > 0){
+            currentMonth--;
+          }
 
           renderCalendar();
         }
-
-      }
     );
 
-  document
-    .getElementById(
-      "nextMonth"
-    )
+    const prevButton = document.getElementById("prevMonth");
+    prevButton.disabled = 
+    currentMonth === 
+    today.getMonth() &&
+    currentYear === 
+    today.getFullYear();
+
+  document.getElementById("nextMonth")
     .addEventListener(
       "click",
-      () => {
+      (e) => {
 
-        if(currentMonth < 11){
+        e.stopPropagation();
 
-          currentMonth++;
-
+        if(currentMonth === 11 && currentYear < 2027)
+          {
+            currentMonth = 0;
+            currentYear++;
+          }
+          else if (currentMonth < 11)
+          {
+            currentMonth++;
+          }
           renderCalendar();
         }
-
-      }
     );
 
+    const nextButton = document.getElementById("nextMonth");
+    nextButton.disabled = currentMonth === 11 && currentYear === 2027;
 }
 
 originField?.addEventListener(
