@@ -131,6 +131,9 @@ document.getElementById(
 const dateField = document.getElementById("dateField");
 const dateText = document.getElementById("dateText");
 const calendarDropdown = document.getElementById("calendarDropdown");
+const passengerField = document.getElementById("passengerField");
+const passengerText = document.getElementById("passengerText");
+const passengerDropdown = document.getElementById("passengerDropdown");
 
 calendarDropdown.addEventListener(
   "click",
@@ -139,8 +142,110 @@ calendarDropdown.addEventListener(
   }
 );
 
+passengerDropdown.addEventListener(
+  "click",
+  (e) => {
+    e.stopPropagation();
+  }
+);
+
 let selectedOrigin = "";
 let selectedDestination = "";
+
+const passengers = {
+  adultos: 1,
+  menores: 0,
+  inapam: 0,
+  estudiantes: 0
+} 
+
+function updatePassengerText(){
+  const total =
+    Object.values(passengers)
+      .reduce(
+        (sum, value) =>
+          sum + value,
+        0
+      );
+
+  if(total === 1){
+    passengerText.textContent =
+      "1 Adulto";
+  }
+  else{
+    passengerText.textContent =
+      `${total} Pasajeros`;
+  }
+
+  document.getElementById(
+    "adultosCount"
+  ).textContent =
+    passengers.adultos;
+
+  document.getElementById(
+    "menoresCount"
+  ).textContent =
+    passengers.menores;
+
+  document.getElementById(
+    "inapamCount"
+  ).textContent =
+    passengers.inapam;
+
+  document.getElementById(
+    "estudiantesCount"
+  ).textContent =
+    passengers.estudiantes;
+}
+
+document
+  .querySelectorAll(
+    ".counter-btn"
+  )
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        const type =
+          button.dataset.type;
+
+        const action =
+          button.dataset.action;
+
+        if(
+          action ===
+          "increase"
+        ){
+          passengers[type]++;
+        }
+        else{
+
+          if(
+            type ===
+            "adultos"
+          ){
+            if(
+              passengers.adultos > 1
+            ){
+              passengers.adultos--;
+            }
+          }
+          else{
+
+            if(
+              passengers[type] > 0
+            ){
+              passengers[type]--;
+            }
+          }
+        }
+
+        updatePassengerText();
+      }
+    );
+  });
 
 swapBtn?.addEventListener(
   "click",
@@ -583,6 +688,13 @@ dateField?.addEventListener(
   }
 );
 
+passengerField?.addEventListener(
+  "click",
+  () => {
+    passengerDropdown.classList.add("show");
+  }
+);
+
 document.addEventListener(
   "click",
   (e) => {
@@ -600,8 +712,20 @@ document.addEventListener(
         "show"
       );
     }
-      
 
+    if(
+      !passengerDropdown.contains(
+        e.target
+      ) &&
+      !passengerField.contains(
+        e.target
+      )
+    ){
+      passengerDropdown.classList.remove(
+        "show"
+      );
+    }
+      
     if(
       !originDropdown.contains(
         e.target

@@ -468,6 +468,11 @@ ul{
   padding:1rem;
 }
 
+.passenger-dropdown{
+  width:360px;
+  padding:1rem;
+}
+
 .calendar-header{
   display:flex;
   justify-content:space-between;
@@ -553,6 +558,58 @@ ul{
   font-size:1rem;
   cursor:pointer;
   transition:.25s;
+}
+
+.passenger-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 0;
+}
+
+.passenger-row:not(:last-child){
+  border-bottom:1px solid #ececec;
+}
+
+.passenger-row h4{
+  font-size:1rem;
+  margin-bottom:.25rem;
+}
+
+.passenger-row p{
+  color:#777;
+  font-size:.85rem;
+}
+
+.passenger-controls{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.counter-btn{
+  width:36px;
+  height:36px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid #C62828;
+  color:#C62828;
+  font-size:1.3rem;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.counter-btn:hover{
+  background:#C62828;
+  color:#fff;
+}
+
+.counter-value{
+  width:24px;
+  text-align:center;
+  font-size:1.2rem;
+  font-weight:700;
 }
 
 .dropdown-state{

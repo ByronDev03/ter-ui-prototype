@@ -186,13 +186,71 @@
           <div class="search-dropdown calendar-dropdown" id="calendarDropdown"></div>
         </div>
         
-        <div class="search-box">
+        <div class="search-box dropdown-container">
           <label>Pasajeros</label>
           
-          <button class="search-field">
+          <button class="search-field" id="passengerField">
             <i class="bi bi-people"></i>
-            <span>1 Adulto</span>
+            <span id="passengerText">1 Adulto</span>
           </button>
+
+          <div class="search-dropdown passenger-dropdown" id="passengerDropdown">
+            <!--Adulto-->
+            <div class="passenger-row">
+              <div>
+                <h4>Adulto</h4>
+                <p>12+ años</p>
+              </div>
+
+              <div class="passenger-controls">
+                <button class="counter-btn" data-type="adultos" data-action="decrease">-</button>
+                <span id="adultosCount" class="counter-value">1</span>
+                <button class="counter-btn" data-type="adultos" data-action="increase">+</button>
+              </div>
+            </div>
+
+            <!--Menor-->
+            <div class="passenger-row">
+              <div>
+                <h4>Menor</h4>
+                <p>3 a 11 años en compañia de un 1 adulto</p>
+              </div>
+              
+              <div class="passenger-controls">
+                <button class="counter-btn" data-type="menores" data-action="decrease">-</button>
+                <span id="menoresCount" class="counter-value">0</span>
+                <button class="counter-btn" data-type="menores" data-action="increase">+</button>
+              </div>
+            </div>
+
+            <!-- INAPAM -->
+            <div class="passenger-row">
+              <div>
+                <h4>INAPAM</h4>
+                <p>Credencial vigente</p>
+              </div>
+
+              <div class="passenger-controls">
+                <button class="counter-btn" data-type="inapam" data-action="decrease">-</button>
+                <span id="inapamCount" class="counter-value">0</span>
+                <button class="counter-btn" data-type="inapam" data-action="increase">+</button>
+              </div>
+            </div>
+
+            <!-- Estudiante -->
+            <div class="passenger-row">
+              <div>
+                <h4>Estudiante</h4>
+                <p>Credencial vigente</p>
+              </div>
+
+              <div class="passenger-controls">
+                <button class="counter-btn" data-type="estudiantes" data-action="decrease">-</button>
+                <span id="estudiantesCount" class="counter-value">0</span>
+                <button class="counter-btn" data-type="estudiantes" data-action="increase">+</button>
+              </div>
+            </div>
+          </div>
         </div>
         
         <button class="btn-search" id="searchTrip">
